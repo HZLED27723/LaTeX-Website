@@ -1,0 +1,68 @@
+\documentclass[11pt, a4paper]{article}
+
+%% >>> preamble
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, allcolors=blue!60!black]{hyperref}
+\usepackage[capitalise, noabbrev]{cleveref}
+%% <<< preamble
+
+\title{A Short Article Title}
+\author{Your Name\\[2pt]
+  \small Your Institution\\
+  \small\texttt{you@example.com}}
+\date{\today}
+
+\begin{document}
+%% >>> snippet
+\maketitle
+
+\begin{abstract}
+  One paragraph: the problem, what you did, what you found, and why it
+  matters. Keep it to around 150 words.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+Motivate the problem and place it in context~\cite{knuth1984}.
+Our contributions are:
+\begin{itemize}
+  \item the first contribution;
+  \item the second contribution.
+\end{itemize}
+
+\section{Method}\label{sec:method}
+Describe the approach. Equations are numbered and referenced with
+\cref{eq:model}:
+\begin{equation}\label{eq:model}
+  y = f(x; \theta) + \varepsilon, \qquad \varepsilon \sim \mathcal{N}(0, \sigma^2).
+\end{equation}
+
+\section{Results}\label{sec:results}
+\Cref{tab:results} summarises the results.
+\begin{table}[htbp]
+  \centering
+  \caption{Main results.}
+  \label{tab:results}
+  \begin{tabular}{@{}lcc@{}}
+    \toprule
+    Method   & Accuracy (\%) & Time (s) \\
+    \midrule
+    Baseline & 81.2          & 12.0 \\
+    Ours     & \textbf{88.3} & \textbf{9.4} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Conclusion}\label{sec:conclusion}
+Summarise what was shown, then point to future work.
+
+\begin{thebibliography}{9}
+  \bibitem{knuth1984} D.~E. Knuth. \emph{The \TeX book}. Addison-Wesley, 1984.
+\end{thebibliography}
+%% <<< snippet
+\end{document}

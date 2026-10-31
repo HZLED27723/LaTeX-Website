@@ -1,0 +1,27 @@
+\documentclass{article}
+\pagestyle{empty}
+
+%% >>> preamble
+\usepackage{amsmath}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+Several equations aligned on the equals sign:
+\begin{align}
+  f(x) &= (x + 1)^2 \label{eq:square} \\
+       &= x^2 + 2x + 1 \nonumber \\
+  g(x) &= \int_0^x f(t)\,\mathrm{d}t
+\end{align}
+Equation~\eqref{eq:square} is numbered; the middle line is not.
+
+One long equation split over two lines, with one number:
+\begin{equation}
+  \begin{split}
+    \mathcal{L}(\theta) &= \sum_{i=1}^{n} \bigl(y_i - \theta^\top x_i\bigr)^2 \\
+                        &\quad + \lambda \lVert \theta \rVert_2^2
+  \end{split}
+  \label{eq:loss}
+\end{equation}
+%% <<< snippet
+\end{document}

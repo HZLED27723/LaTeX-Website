@@ -1,0 +1,30 @@
+\documentclass{article}
+\pagestyle{empty}
+
+%% >>> preamble
+\usepackage{booktabs}
+\usepackage{multirow}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\begin{table}[htbp]
+  \centering
+  \caption{Merged cells with \texttt{multirow} and \texttt{multicolumn}.}
+  \label{tab:merged}
+  \begin{tabular}{@{}llcc@{}}
+    \toprule
+            &          & \multicolumn{2}{c}{Accuracy (\%)} \\
+    \cmidrule(l){3-4}
+    Dataset & Method   & Val  & Test \\
+    \midrule
+    \multirow{2}{*}{CIFAR-10} & Baseline & 91.2 & 90.8 \\
+                              & Ours     & 93.5 & 93.1 \\
+    \midrule
+    \multirow{2}{*}{ImageNet} & Baseline & 76.1 & 75.4 \\
+                              & Ours     & 78.9 & 78.2 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+%% <<< snippet
+\end{document}

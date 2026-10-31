@@ -1,0 +1,36 @@
+{
+  "id": "beamer-slides",
+  "name": "Slides (Beamer)",
+  "type": "template",
+  "category": [
+    "presentations"
+  ],
+  "tags": [
+    "beamer",
+    "slides",
+    "presentation",
+    "talk",
+    "frame",
+    "columns",
+    "16:9"
+  ],
+  "requires": [
+    "booktabs"
+  ],
+  "description": "A 16:9 Beamer talk: title slide, outline, step-by-step bullets, a two-column slide and a closing slide.",
+  "notes": [
+    "`aspectratio=169` for modern screens. Remove it for 4:3.",
+    "`\\item<2->` reveals an item from the 2nd click onwards. `\\pause` is the quick alternative.",
+    "Navigation symbols are hidden because nobody uses them.",
+    "Print handouts without the overlays: `\\documentclass[handout]{beamer}`."
+  ],
+  "links": [
+    {
+      "label": "beamer on CTAN",
+      "url": "https://ctan.org/pkg/beamer"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": true,
+  "preview": "preview.svg"
+}

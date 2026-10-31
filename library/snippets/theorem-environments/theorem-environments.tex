@@ -1,0 +1,40 @@
+\documentclass{article}
+\pagestyle{empty}
+
+%% >>> preamble
+\usepackage{amsmath}
+\usepackage{amsthm}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\section{Convexity}
+\begin{definition}[Convex function]
+  A function $f$ is \emph{convex} if
+  $f(\lambda x + (1-\lambda) y) \le \lambda f(x) + (1-\lambda) f(y)$
+  for all $x, y$ and all $\lambda \in [0, 1]$.
+\end{definition}
+
+\begin{theorem}\label{thm:global}
+  Every local minimum of a convex function is a global minimum.
+\end{theorem}
+
+\begin{proof}
+  Suppose $x^\star$ is a local but not a global minimum, so some $y$ has
+  $f(y) < f(x^\star)$. Convexity gives points arbitrarily close to $x^\star$
+  with smaller value, a contradiction.
+\end{proof}
+
+\begin{remark}
+  Strict convexity also makes the minimiser unique.
+\end{remark}
+%% <<< snippet
+\end{document}

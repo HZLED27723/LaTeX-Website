@@ -1,0 +1,25 @@
+\documentclass{article}
+\pagestyle{empty}
+
+%% >>> preamble
+\usepackage{booktabs}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\begin{table}[htbp]
+  \centering
+  \caption{Model comparison on the test set.}
+  \label{tab:results}
+  \begin{tabular}{@{}lccc@{}}
+    \toprule
+    Model        & Accuracy (\%) & F1 score      & Params (M) \\
+    \midrule
+    Baseline     & 81.2          & 0.79          & 12.4 \\
+    Ours (small) & 85.7          & 0.84          & 8.1  \\
+    Ours (large) & \textbf{88.3} & \textbf{0.87} & 31.0 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+%% <<< snippet
+\end{document}

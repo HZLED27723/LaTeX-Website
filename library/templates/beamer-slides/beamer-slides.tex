@@ -1,0 +1,61 @@
+\documentclass[aspectratio=169]{beamer}
+
+%% >>> preamble
+\usetheme{Madrid}
+\setbeamertemplate{navigation symbols}{}
+\usepackage{booktabs}
+%% <<< preamble
+
+\title[Short title]{Presentation Title}
+\subtitle{A subtitle that explains a bit more}
+\author{Your Name}
+\institute{Your Institution}
+\date{\today}
+
+\begin{document}
+%% >>> snippet
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Motivation}
+\begin{frame}{Why this matters}
+  \begin{itemize}
+    \item<1-> The first point appears immediately
+    \item<2-> The second point appears on the next click
+    \item<3-> And a third
+  \end{itemize}
+\end{frame}
+
+\section{Results}
+\begin{frame}{Two columns}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Key equation}
+        \[ E = mc^2 \]
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \centering
+      \begin{tabular}{@{}lc@{}}
+        \toprule
+        Method & Score \\
+        \midrule
+        Baseline & 0.81 \\
+        Ours     & \textbf{0.88} \\
+        \bottomrule
+      \end{tabular}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Thank you}
+  \centering
+  \Large Questions?
+\end{frame}
+%% <<< snippet
+\end{document}

@@ -1,0 +1,56 @@
+{
+  "id": "everyday-preamble",
+  "name": "Everyday preamble",
+  "type": "preamble",
+  "category": [
+    "setup"
+  ],
+  "tags": [
+    "preamble",
+    "setup",
+    "packages",
+    "default",
+    "hyperref",
+    "geometry",
+    "microtype",
+    "starter"
+  ],
+  "requires": [
+    "fontenc",
+    "microtype",
+    "geometry",
+    "amsmath",
+    "amssymb",
+    "mathtools",
+    "graphicx",
+    "booktabs",
+    "caption",
+    "xcolor",
+    "hyperref",
+    "cleveref"
+  ],
+  "description": "My go-to set of packages for any article or report: fonts, margins, maths, tables, figures, links.",
+  "notes": [
+    "Order: everything else first, then `hyperref`, then `cleveref` last.",
+    "`microtype` improves spacing and line breaks for free. Always include it.",
+    "Download the `.sty` and `\\usepackage{everyday-preamble}` to keep every document consistent.",
+    "With `T1` fontenc, accented characters and `<`/`>` in text come out right."
+  ],
+  "links": [
+    {
+      "label": "geometry on CTAN",
+      "url": "https://ctan.org/pkg/geometry"
+    },
+    {
+      "label": "microtype on CTAN",
+      "url": "https://ctan.org/pkg/microtype"
+    },
+    {
+      "label": "hyperref on CTAN",
+      "url": "https://ctan.org/pkg/hyperref"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": true,
+  "preview": "preview.svg"
+}

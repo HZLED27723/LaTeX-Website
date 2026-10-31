@@ -1,0 +1,860 @@
+[
+  {
+    "added": "2026-10-31",
+    "category": [
+      "setup"
+    ],
+    "description": "My go-to set of packages for any article or report: fonts, margins, maths, tables, figures, links.",
+    "featured": true,
+    "id": "everyday-preamble",
+    "links": [
+      {
+        "label": "geometry on CTAN",
+        "url": "https://ctan.org/pkg/geometry"
+      },
+      {
+        "label": "microtype on CTAN",
+        "url": "https://ctan.org/pkg/microtype"
+      },
+      {
+        "label": "hyperref on CTAN",
+        "url": "https://ctan.org/pkg/hyperref"
+      }
+    ],
+    "name": "Everyday preamble",
+    "notes": [
+      "Order: everything else first, then `hyperref`, then `cleveref` last.",
+      "`microtype` improves spacing and line breaks for free. Always include it.",
+      "Download the `.sty` and `\\usepackage{everyday-preamble}` to keep every document consistent.",
+      "With `T1` fontenc, accented characters and `<`/`>` in text come out right."
+    ],
+    "path": "library/preambles/everyday-preamble",
+    "preview": "preview.svg",
+    "requires": [
+      "fontenc",
+      "microtype",
+      "geometry",
+      "amsmath",
+      "amssymb",
+      "mathtools",
+      "graphicx",
+      "booktabs",
+      "caption",
+      "xcolor",
+      "hyperref",
+      "cleveref"
+    ],
+    "tags": [
+      "preamble",
+      "setup",
+      "packages",
+      "default",
+      "hyperref",
+      "geometry",
+      "microtype",
+      "starter"
+    ],
+    "type": "preamble"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "math",
+      "setup"
+    ],
+    "description": "Shortcuts I use constantly: number sets, auto-sizing |abs| and ‖norm‖, argmin, expectation, upright d.",
+    "featured": false,
+    "id": "math-macros",
+    "links": [
+      {
+        "label": "mathtools on CTAN",
+        "url": "https://ctan.org/pkg/mathtools"
+      }
+    ],
+    "name": "Maths shortcuts & operators",
+    "notes": [
+      "`\\DeclarePairedDelimiter` gives `\\abs{x}` (fixed size) and `\\abs*{x}` (grows to fit, like `\\left|...\\right|`).",
+      "`\\DeclareMathOperator*` (starred) puts subscripts **under** the operator in display maths, as with argmin.",
+      "`\\dd` gives an upright d with correct spacing: `\\int f(x) \\dd x`.",
+      "If a name clashes (e.g. another package defines `\\C`), rename it here once."
+    ],
+    "path": "library/preambles/math-macros",
+    "preview": "preview.svg",
+    "requires": [
+      "amsmath",
+      "amssymb",
+      "mathtools"
+    ],
+    "tags": [
+      "macros",
+      "newcommand",
+      "operators",
+      "argmin",
+      "norm",
+      "abs",
+      "real numbers",
+      "mathtools"
+    ],
+    "type": "preamble"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "layout",
+      "setup"
+    ],
+    "description": "Restyle `\\section` and `\\subsection`: a coloured heading with a thin rule underneath.",
+    "featured": false,
+    "id": "section-headings",
+    "links": [
+      {
+        "label": "titlesec on CTAN",
+        "url": "https://ctan.org/pkg/titlesec"
+      }
+    ],
+    "name": "Coloured section headings",
+    "notes": [
+      "`\\titleformat{cmd}{format}{label}{sep}{before-code}[after-code]`. The rule goes in the optional last argument.",
+      "`\\titlespacing*{\\section}{left}{before}{after}`. The `*` removes the indent of the paragraph that follows.",
+      "Change `headingblue` once and every heading follows."
+    ],
+    "path": "library/preambles/section-headings",
+    "preview": "preview.svg",
+    "requires": [
+      "xcolor",
+      "titlesec"
+    ],
+    "tags": [
+      "titlesec",
+      "section",
+      "heading",
+      "colour",
+      "style",
+      "titleformat",
+      "rule"
+    ],
+    "type": "preamble"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "code",
+      "algorithms"
+    ],
+    "description": "A numbered, captioned algorithm float with Require/Ensure, a loop, a condition and a return.",
+    "featured": false,
+    "id": "algorithm-pseudocode",
+    "links": [
+      {
+        "label": "algorithmicx on CTAN",
+        "url": "https://ctan.org/pkg/algorithmicx"
+      },
+      {
+        "label": "algorithms on CTAN",
+        "url": "https://ctan.org/pkg/algorithms"
+      }
+    ],
+    "name": "Algorithm pseudocode",
+    "notes": [
+      "`[1]` after `algorithmic` numbers every line. Use `[0]` for none.",
+      "Keywords end with an explicit `\\EndFor`, `\\EndIf`, `\\EndWhile` (algpseudocode style).",
+      "Use `\\gets` for assignment (←). It reads better than `=`.",
+      "Rename Require/Ensure to Input/Output: `\\renewcommand{\\algorithmicrequire}{\\textbf{Input:}}`."
+    ],
+    "path": "library/snippets/algorithm-pseudocode",
+    "preview": "preview.svg",
+    "requires": [
+      "amsmath",
+      "algorithm",
+      "algpseudocode"
+    ],
+    "tags": [
+      "algorithm",
+      "pseudocode",
+      "algorithmic",
+      "algpseudocode",
+      "for",
+      "if",
+      "loop"
+    ],
+    "type": "snippet"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "math"
+    ],
+    "description": "`align` for several equations lined up on `=`, and `split` for one long equation with a single number.",
+    "featured": true,
+    "id": "aligned-equations",
+    "links": [
+      {
+        "label": "amsmath on CTAN",
+        "url": "https://ctan.org/pkg/amsmath"
+      }
+    ],
+    "name": "Aligned & multi-line equations",
+    "notes": [
+      "`&` marks the alignment point and `\\\\` ends a line. Use `align*` for no numbers at all.",
+      "`\\nonumber` (or `\\notag`) drops the number on a single line.",
+      "Reference with `\\eqref{...}`, which adds the parentheses for you.",
+      "Never use `eqnarray`. Its spacing around `=` is wrong. Use `align`."
+    ],
+    "path": "library/snippets/aligned-equations",
+    "preview": "preview.svg",
+    "requires": [
+      "amsmath"
+    ],
+    "tags": [
+      "align",
+      "equation",
+      "split",
+      "numbering",
+      "eqref",
+      "multi-line",
+      "amsmath"
+    ],
+    "type": "snippet"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "tables"
+    ],
+    "description": "A clean, publication-style table: no vertical lines, proper rule spacing, caption above.",
+    "featured": true,
+    "id": "booktabs-table",
+    "links": [
+      {
+        "label": "booktabs on CTAN",
+        "url": "https://ctan.org/pkg/booktabs"
+      }
+    ],
+    "name": "Booktabs table",
+    "notes": [
+      "No vertical lines. booktabs rules look wrong with `|` columns.",
+      "`@{}` at both ends removes the outer padding so the rules line up with the text.",
+      "Put the `\\caption` **above** a table and **below** a figure (the usual convention).",
+      "`\\label` must come *after* `\\caption`, otherwise `\\ref` points at the section number."
+    ],
+    "path": "library/snippets/booktabs-table",
+    "preview": "preview.svg",
+    "requires": [
+      "booktabs"
+    ],
+    "tags": [
+      "table",
+      "booktabs",
+      "toprule",
+      "midrule",
+      "caption",
+      "professional"
+    ],
+    "type": "snippet"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "boxes",
+      "layout"
+    ],
+    "description": "Reusable coloured note and warning boxes with titles. They break across pages.",
+    "featured": true,
+    "id": "callout-box",
+    "links": [
+      {
+        "label": "tcolorbox on CTAN",
+        "url": "https://ctan.org/pkg/tcolorbox"
+      }
+    ],
+    "name": "Callout boxes (tcolorbox)",
+    "notes": [
+      "Define the box once with `\\newtcolorbox` and the optional title argument `[1][Note]` sets a default.",
+      "`breakable` lets long boxes split across pages, and it needs `\\tcbuselibrary{breakable}`.",
+      "Colours mix like `blue!55!black` (55% blue, 45% black). Keep backgrounds very light (`!4!white`)."
+    ],
+    "path": "library/snippets/callout-box",
+    "preview": "preview.svg",
+    "requires": [
+      "tcolorbox"
+    ],
+    "tags": [
+      "box",
+      "tcolorbox",
+      "callout",
+      "note",
+      "warning",
+      "highlight",
+      "frame",
+      "admonition"
+    ],
+    "type": "snippet"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "code"
+    ],
+    "description": "Syntax-highlighted source code with line numbers, a light background and a caption.",
+    "featured": true,
+    "id": "code-listing",
+    "links": [
+      {
+        "label": "listings on CTAN",
+        "url": "https://ctan.org/pkg/listings"
+      }
+    ],
+    "name": "Code listing with syntax colours",
+    "notes": [
+      "`\\lstset{style=mystyle}` applies the style everywhere. Override per listing with `[language=C, ...]`.",
+      "listings doesn't handle UTF-8 (é, ü, →) in code out of the box. Add `literate={é}{{\\'e}}1` or switch to `minted`.",
+      "`minted` has nicer highlighting (Pygments) but needs `-shell-escape`. listings works everywhere, Overleaf included.",
+      "Include a file directly: `\\lstinputlisting[language=Python]{script.py}`."
+    ],
+    "path": "library/snippets/code-listing",
+    "preview": "preview.svg",
+    "requires": [
+      "xcolor",
+      "listings"
+    ],
+    "tags": [
+      "code",
+      "listings",
+      "lstlisting",
+      "syntax highlighting",
+      "python",
+      "source code",
+      "verbatim"
+    ],
+    "type": "snippet"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "references"
+    ],
+    "description": "`\\cref` writes \"Figure 1\", \"Equation (2)\", \"Section 1\" for you, as clickable links.",
+    "featured": false,
+    "id": "cross-references",
+    "links": [
+      {
+        "label": "cleveref on CTAN",
+        "url": "https://ctan.org/pkg/cleveref"
+      },
+      {
+        "label": "hyperref on CTAN",
+        "url": "https://ctan.org/pkg/hyperref"
+      }
+    ],
+    "name": "Smart cross-references (cleveref)",
+    "notes": [
+      "Load order matters: `xcolor` before `hyperref` (for colour mixes like `blue!60!black`), `hyperref` near the end, `cleveref` **after** it.",
+      "`\\cref{a,b}` handles lists (\"Figures 1 and 2\"). Use `\\Cref` at the start of a sentence.",
+      "`[capitalise, noabbrev]` gives \"Figure 1\" instead of \"fig. 1\".",
+      "Labels: use prefixes like `fig:`, `tab:`, `eq:`, `sec:` so you can tell them apart."
+    ],
+    "path": "library/snippets/cross-references",
+    "preview": "preview.svg",
+    "requires": [
+      "amsmath",
+      "graphicx",
+      "xcolor",
+      "hyperref",
+      "cleveref"
+    ],
+    "tags": [
+      "ref",
+      "cref",
+      "cleveref",
+      "hyperref",
+      "label",
+      "link",
+      "cross-reference"
+    ],
+    "type": "snippet"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "lists"
+    ],
+    "description": "Compact bullets, (a)/(b) labels, \"Step 1:\" labels and inline lists, all with enumitem.",
+    "featured": false,
+    "id": "custom-lists",
+    "links": [
+      {
+        "label": "enumitem on CTAN",
+        "url": "https://ctan.org/pkg/enumitem"
+      }
+    ],
+    "name": "Custom lists (enumitem)",
+    "notes": [
+      "`noitemsep` removes the gap between items. `nosep` removes every gap, top and bottom included.",
+      "Label counters: `\\arabic*` 1, `\\alph*` a, `\\Alph*` A, `\\roman*` i, `\\Roman*` I.",
+      "Inline lists need the `[inline]` package option and the starred environments (`enumerate*`).",
+      "Set it globally: `\\setlist[itemize]{noitemsep}`."
+    ],
+    "path": "library/snippets/custom-lists",
+    "preview": "preview.svg",
+    "requires": [
+      "enumitem"
+    ],
+    "tags": [
+      "itemize",
+      "enumerate",
+      "enumitem",
+      "list",
+      "spacing",
+      "label",
+      "inline list",
+      "bullet"
+    ],
+    "type": "snippet"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "math"
+    ],
+    "description": "The matrix environments, with (), [] and || delimiters, dots, and an augmented matrix.",
+    "featured": false,
+    "id": "matrices",
+    "links": [
+      {
+        "label": "amsmath on CTAN",
+        "url": "https://ctan.org/pkg/amsmath"
+      }
+    ],
+    "name": "Matrices & determinants",
+    "notes": [
+      "`pmatrix` gives ( ), `bmatrix` [ ], `Bmatrix` { }, `vmatrix` | | (determinant), `Vmatrix` ‖ ‖.",
+      "Dots: `\\cdots` (horizontal), `\\vdots`, `\\ddots`.",
+      "Augmented matrix: an `array` with `|` in the column spec, wrapped in `\\left[ ... \\right]`.",
+      "Inline in text: `$\\left(\\begin{smallmatrix} a & b \\\\ c & d \\end{smallmatrix}\\right)$`."
+    ],
+    "path": "library/snippets/matrices",
+    "preview": "preview.svg",
+    "requires": [
+      "amsmath"
+    ],
+    "tags": [
+      "matrix",
+      "bmatrix",
+      "pmatrix",
+      "vmatrix",
+      "determinant",
+      "augmented",
+      "linear algebra"
+    ],
+    "type": "snippet"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "tables"
+    ],
+    "description": "Cells spanning several rows or columns, with a partial rule under a grouped header.",
+    "featured": false,
+    "id": "multirow-table",
+    "links": [
+      {
+        "label": "multirow on CTAN",
+        "url": "https://ctan.org/pkg/multirow"
+      }
+    ],
+    "name": "Merged cells (multirow / multicolumn)",
+    "notes": [
+      "`\\multicolumn{n}{c}{text}` spans *n* columns. It's built in, no package needed.",
+      "`\\multirow{n}{*}{text}` spans *n* rows. Leave the cells below it empty.",
+      "`\\cmidrule(l){3-4}` draws a rule under columns 3–4; `(l)`/`(r)` trim its ends so neighbouring rules don't touch."
+    ],
+    "path": "library/snippets/multirow-table",
+    "preview": "preview.svg",
+    "requires": [
+      "booktabs",
+      "multirow"
+    ],
+    "tags": [
+      "table",
+      "multirow",
+      "multicolumn",
+      "merge",
+      "span",
+      "cmidrule"
+    ],
+    "type": "snippet"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "figures",
+      "plots"
+    ],
+    "description": "A line chart drawn natively in LaTeX: two data series and a function, with a grid and legend.",
+    "featured": true,
+    "id": "pgfplots-line-chart",
+    "links": [
+      {
+        "label": "pgfplots on CTAN",
+        "url": "https://ctan.org/pkg/pgfplots"
+      }
+    ],
+    "name": "Line chart (pgfplots)",
+    "notes": [
+      "Always set `\\pgfplotsset{compat=...}` or you'll get old, ugly defaults and a warning.",
+      "Plot a CSV directly: `\\addplot table [x=epoch, y=loss, col sep=comma] {data.csv};`",
+      "Fonts match your document automatically, which a matplotlib PNG never does.",
+      "Lots of points making it slow? Export from matplotlib with `tikzplotlib`, or use `external` to cache."
+    ],
+    "path": "library/snippets/pgfplots-line-chart",
+    "preview": "preview.svg",
+    "requires": [
+      "pgfplots"
+    ],
+    "tags": [
+      "plot",
+      "chart",
+      "graph",
+      "pgfplots",
+      "axis",
+      "legend",
+      "tikz",
+      "data"
+    ],
+    "type": "snippet"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "math"
+    ],
+    "description": "Piecewise definitions with a left brace and conditions, using `cases`.",
+    "featured": false,
+    "id": "piecewise-cases",
+    "links": [
+      {
+        "label": "amsmath on CTAN",
+        "url": "https://ctan.org/pkg/amsmath"
+      }
+    ],
+    "name": "Piecewise functions (cases)",
+    "notes": [
+      "Use `\\text{if } ...` for words inside maths so they get normal spacing and an upright font.",
+      "Want full-size fractions in the cases? Load `mathtools` and use `dcases` instead."
+    ],
+    "path": "library/snippets/piecewise-cases",
+    "preview": "preview.svg",
+    "requires": [
+      "amsmath"
+    ],
+    "tags": [
+      "cases",
+      "piecewise",
+      "brace",
+      "conditional",
+      "amsmath"
+    ],
+    "type": "snippet"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "figures"
+    ],
+    "description": "Two images next to each other, each with its own (a)/(b) caption, plus a shared caption.",
+    "featured": true,
+    "id": "side-by-side-figures",
+    "links": [
+      {
+        "label": "subcaption on CTAN",
+        "url": "https://ctan.org/pkg/subcaption"
+      }
+    ],
+    "name": "Side-by-side figures (subcaption)",
+    "notes": [
+      "`example-image-a` / `-b` come with the `mwe` package. Replace them with your own file names (no extension needed).",
+      "Keep the widths summing to just under 1 (`0.48 + 0.48`) and put `\\hfill` between them.",
+      "`[b]` aligns the subfigures on their bottom edge, which matters when the images have different heights.",
+      "Three across? Use `0.32\\textwidth` each."
+    ],
+    "path": "library/snippets/side-by-side-figures",
+    "preview": "preview.svg",
+    "requires": [
+      "graphicx",
+      "subcaption"
+    ],
+    "tags": [
+      "figure",
+      "subfigure",
+      "subcaption",
+      "side by side",
+      "includegraphics",
+      "image",
+      "panel"
+    ],
+    "type": "snippet"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "tables",
+      "units"
+    ],
+    "description": "Numbers aligned on the decimal point with the `S` column, plus consistent units in text.",
+    "featured": false,
+    "id": "siunitx-table",
+    "links": [
+      {
+        "label": "siunitx on CTAN",
+        "url": "https://ctan.org/pkg/siunitx"
+      }
+    ],
+    "name": "Decimal-aligned numbers & units (siunitx)",
+    "notes": [
+      "`table-format=2.3` means 2 integer digits and 3 decimals. It reserves the right width so the column is centred.",
+      "Wrap non-numeric header cells in braces `{...}` or siunitx tries to parse them as numbers.",
+      "In text: `\\qty{9.81}{\\metre\\per\\second\\squared}`, `\\num{6.022e23}`, `\\unit{\\kilo\\gram}` (siunitx v3 names)."
+    ],
+    "path": "library/snippets/siunitx-table",
+    "preview": "preview.svg",
+    "requires": [
+      "booktabs",
+      "siunitx"
+    ],
+    "tags": [
+      "siunitx",
+      "units",
+      "decimal",
+      "align",
+      "S column",
+      "scientific notation",
+      "qty",
+      "num"
+    ],
+    "type": "snippet"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "tables"
+    ],
+    "description": "A table stretched to `\\textwidth` where the `X` column wraps long text automatically.",
+    "featured": false,
+    "id": "tabularx-full-width",
+    "links": [
+      {
+        "label": "tabularx on CTAN",
+        "url": "https://ctan.org/pkg/tabularx"
+      }
+    ],
+    "name": "Full-width table with wrapping text",
+    "notes": [
+      "`X` columns share whatever width is left after the other columns.",
+      "`>{\\raggedright\\arraybackslash}X` gives ragged-right text, which reads better than justified text in narrow cells.",
+      "Don't use `\\verb` inside `tabularx`. It reads the whole body as an argument, so `\\verb` breaks."
+    ],
+    "path": "library/snippets/tabularx-full-width",
+    "preview": "preview.svg",
+    "requires": [
+      "booktabs",
+      "tabularx"
+    ],
+    "tags": [
+      "table",
+      "tabularx",
+      "wrap",
+      "textwidth",
+      "long text",
+      "X column"
+    ],
+    "type": "snippet"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "math",
+      "structure"
+    ],
+    "description": "Numbered theorem, lemma and definition environments sharing one counter, plus `proof` with a QED box.",
+    "featured": false,
+    "id": "theorem-environments",
+    "links": [
+      {
+        "label": "amsthm on CTAN",
+        "url": "https://ctan.org/pkg/amsthm"
+      }
+    ],
+    "name": "Theorems, definitions & proofs",
+    "notes": [
+      "`[theorem]` in `\\newtheorem{lemma}[theorem]{Lemma}` makes lemmas share the theorem counter (Theorem 1.1, Lemma 1.2, …).",
+      "`[section]` on the first one resets numbering every section. Drop it for 1, 2, 3, ….",
+      "The three styles: `plain` (italic body, for results), `definition` (upright), `remark` (lighter heading).",
+      "`\\newtheorem*` (with a star) is unnumbered."
+    ],
+    "path": "library/snippets/theorem-environments",
+    "preview": "preview.svg",
+    "requires": [
+      "amsmath",
+      "amsthm"
+    ],
+    "tags": [
+      "theorem",
+      "lemma",
+      "definition",
+      "proof",
+      "remark",
+      "amsthm",
+      "newtheorem",
+      "qed"
+    ],
+    "type": "snippet"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "documents"
+    ],
+    "description": "A complete short article: title, abstract, sections, an equation, a table and references.",
+    "featured": true,
+    "id": "article-template",
+    "name": "Article",
+    "notes": [
+      "Bibliography uses `thebibliography` so it compiles anywhere. Switch to BibTeX/biblatex once you have more than a handful of references.",
+      "Compile twice (or use latexmk) so the references and `\\cref`s resolve."
+    ],
+    "path": "library/templates/article-template",
+    "preview": "preview.svg",
+    "requires": [
+      "fontenc",
+      "microtype",
+      "geometry",
+      "amsmath",
+      "amssymb",
+      "graphicx",
+      "booktabs",
+      "xcolor",
+      "hyperref",
+      "cleveref"
+    ],
+    "tags": [
+      "article",
+      "paper",
+      "essay",
+      "abstract",
+      "template",
+      "starter"
+    ],
+    "type": "template"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "presentations"
+    ],
+    "description": "A 16:9 Beamer talk: title slide, outline, step-by-step bullets, a two-column slide and a closing slide.",
+    "featured": true,
+    "id": "beamer-slides",
+    "links": [
+      {
+        "label": "beamer on CTAN",
+        "url": "https://ctan.org/pkg/beamer"
+      }
+    ],
+    "name": "Slides (Beamer)",
+    "notes": [
+      "`aspectratio=169` for modern screens. Remove it for 4:3.",
+      "`\\item<2->` reveals an item from the 2nd click onwards. `\\pause` is the quick alternative.",
+      "Navigation symbols are hidden because nobody uses them.",
+      "Print handouts without the overlays: `\\documentclass[handout]{beamer}`."
+    ],
+    "path": "library/templates/beamer-slides",
+    "preview": "preview.svg",
+    "requires": [
+      "booktabs"
+    ],
+    "tags": [
+      "beamer",
+      "slides",
+      "presentation",
+      "talk",
+      "frame",
+      "columns",
+      "16:9"
+    ],
+    "type": "template"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "documents"
+    ],
+    "description": "Problem-set layout: header with course and name, boxed numbered problems, and solutions ending in ∎.",
+    "featured": false,
+    "id": "homework",
+    "name": "Homework / problem set",
+    "notes": [
+      "`problem` takes an optional label: `\\begin{problem}[10 points]`.",
+      "`solution` is amsthm's `proof` renamed, so you get the QED box for free.",
+      "Edit the course code and your name in the `\\lhead` / `\\rhead` lines once."
+    ],
+    "path": "library/templates/homework",
+    "preview": "preview.svg",
+    "requires": [
+      "geometry",
+      "amsmath",
+      "amssymb",
+      "amsthm",
+      "enumitem",
+      "fancyhdr",
+      "tcolorbox"
+    ],
+    "tags": [
+      "homework",
+      "assignment",
+      "problem set",
+      "solution",
+      "exercise",
+      "tcolorbox",
+      "template"
+    ],
+    "type": "template"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "documents"
+    ],
+    "description": "A university lab report: full title page, running header, and Aim → Theory → Method → Results → Discussion.",
+    "featured": false,
+    "id": "lab-report",
+    "name": "Lab report",
+    "notes": [
+      "`titlepage` gives an unnumbered page of its own. `\\vfill` pushes the details to the bottom.",
+      "Header/footer are set with `fancyhdr`. `\\fancyhf{}` clears the defaults first.",
+      "Use `siunitx` for every measured value so units and uncertainties stay consistent."
+    ],
+    "path": "library/templates/lab-report",
+    "preview": "preview.svg",
+    "requires": [
+      "fontenc",
+      "geometry",
+      "amsmath",
+      "graphicx",
+      "booktabs",
+      "siunitx",
+      "fancyhdr",
+      "xcolor",
+      "hyperref"
+    ],
+    "tags": [
+      "lab report",
+      "report",
+      "title page",
+      "experiment",
+      "university",
+      "fancyhdr",
+      "template"
+    ],
+    "type": "template"
+  }
+]

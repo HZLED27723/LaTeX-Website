@@ -1,0 +1,11 @@
+{
+  "brand_prefix": "My",
+  "brand_accent": "LaTeX",
+  "headline": "Write it once. Reuse it forever.",
+  "tagline": "My personal library of LaTeX snippets, preambles and document templates.",
+  "repo_url": "https://github.com/HZLED27723/LaTeX-Website",
+  "repo_branch": "main",
+  "repo_subdir": "",
+  "site_url": "https://hzled27723.github.io/LaTeX-Website",
+  "cname": ""
+}

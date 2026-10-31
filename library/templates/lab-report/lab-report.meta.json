@@ -1,0 +1,37 @@
+{
+  "id": "lab-report",
+  "name": "Lab report",
+  "type": "template",
+  "category": [
+    "documents"
+  ],
+  "tags": [
+    "lab report",
+    "report",
+    "title page",
+    "experiment",
+    "university",
+    "fancyhdr",
+    "template"
+  ],
+  "requires": [
+    "fontenc",
+    "geometry",
+    "amsmath",
+    "graphicx",
+    "booktabs",
+    "siunitx",
+    "fancyhdr",
+    "xcolor",
+    "hyperref"
+  ],
+  "description": "A university lab report: full title page, running header, and Aim → Theory → Method → Results → Discussion.",
+  "notes": [
+    "`titlepage` gives an unnumbered page of its own. `\\vfill` pushes the details to the bottom.",
+    "Header/footer are set with `fancyhdr`. `\\fancyhf{}` clears the defaults first.",
+    "Use `siunitx` for every measured value so units and uncertainties stay consistent."
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

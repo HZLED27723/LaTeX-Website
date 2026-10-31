@@ -1,0 +1,39 @@
+{
+  "id": "theorem-environments",
+  "name": "Theorems, definitions & proofs",
+  "type": "snippet",
+  "category": [
+    "math",
+    "structure"
+  ],
+  "tags": [
+    "theorem",
+    "lemma",
+    "definition",
+    "proof",
+    "remark",
+    "amsthm",
+    "newtheorem",
+    "qed"
+  ],
+  "requires": [
+    "amsmath",
+    "amsthm"
+  ],
+  "description": "Numbered theorem, lemma and definition environments sharing one counter, plus `proof` with a QED box.",
+  "notes": [
+    "`[theorem]` in `\\newtheorem{lemma}[theorem]{Lemma}` makes lemmas share the theorem counter (Theorem 1.1, Lemma 1.2, …).",
+    "`[section]` on the first one resets numbering every section. Drop it for 1, 2, 3, ….",
+    "The three styles: `plain` (italic body, for results), `definition` (upright), `remark` (lighter heading).",
+    "`\\newtheorem*` (with a star) is unnumbered."
+  ],
+  "links": [
+    {
+      "label": "amsthm on CTAN",
+      "url": "https://ctan.org/pkg/amsthm"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

@@ -1,0 +1,26 @@
+\documentclass{article}
+\pagestyle{empty}
+
+%% >>> preamble
+\usepackage{amsmath}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\begin{equation}
+  |x| =
+  \begin{cases}
+    x  & \text{if } x \ge 0, \\
+    -x & \text{otherwise.}
+  \end{cases}
+\end{equation}
+
+\begin{equation}
+  \operatorname{ReLU}(x) = \max(0, x) =
+  \begin{cases}
+    0 & x < 0, \\
+    x & x \ge 0.
+  \end{cases}
+\end{equation}
+%% <<< snippet
+\end{document}

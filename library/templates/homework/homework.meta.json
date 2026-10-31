@@ -1,0 +1,35 @@
+{
+  "id": "homework",
+  "name": "Homework / problem set",
+  "type": "template",
+  "category": [
+    "documents"
+  ],
+  "tags": [
+    "homework",
+    "assignment",
+    "problem set",
+    "solution",
+    "exercise",
+    "tcolorbox",
+    "template"
+  ],
+  "requires": [
+    "geometry",
+    "amsmath",
+    "amssymb",
+    "amsthm",
+    "enumitem",
+    "fancyhdr",
+    "tcolorbox"
+  ],
+  "description": "Problem-set layout: header with course and name, boxed numbered problems, and solutions ending in ∎.",
+  "notes": [
+    "`problem` takes an optional label: `\\begin{problem}[10 points]`.",
+    "`solution` is amsthm's `proof` renamed, so you get the QED box for free.",
+    "Edit the course code and your name in the `\\lhead` / `\\rhead` lines once."
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

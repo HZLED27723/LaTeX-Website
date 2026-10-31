@@ -1,0 +1,57 @@
+\documentclass[11pt, a4paper]{article}
+
+%% >>> preamble
+\usepackage[a4paper, margin=2.2cm]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textbf{MATH 101} -- Problem Set 1}
+\rhead{Your Name}
+\cfoot{\thepage}
+\setlength{\headheight}{14pt}
+\newcounter{problem}
+\newenvironment{problem}[1][]{%
+  \refstepcounter{problem}%
+  \begin{tcolorbox}[colback=gray!5, colframe=gray!55, boxrule=0.5pt, arc=1mm,
+      colbacktitle=gray!18, coltitle=black, fonttitle=\bfseries,
+      title={Problem \theproblem\quad #1}]%
+}{\end{tcolorbox}}
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\begin{center}
+  {\LARGE\bfseries Problem Set 1}\\[4pt]
+  Due Friday, 11:59\,pm
+\end{center}
+
+\begin{problem}[10 points]
+  Show that $\displaystyle\sum_{k=1}^{n} k = \frac{n(n+1)}{2}$ for all $n \in \mathbb{N}$.
+\end{problem}
+\begin{solution}
+  By induction on $n$. For $n = 1$ both sides equal $1$. Assuming the claim for $n$,
+  \[
+    \sum_{k=1}^{n+1} k = \frac{n(n+1)}{2} + (n + 1) = \frac{(n+1)(n+2)}{2},
+  \]
+  which is the claim for $n + 1$.
+\end{solution}
+
+\begin{problem}[5 points]
+  Solve for $x$:
+  \begin{enumerate}[label=(\alph*)]
+    \item $2x + 3 = 11$,
+    \item $x^2 - 5x + 6 = 0$.
+  \end{enumerate}
+\end{problem}
+\begin{solution}
+  \begin{enumerate}[label=(\alph*)]
+    \item $x = 4$.
+    \item $(x - 2)(x - 3) = 0$, so $x \in \{2, 3\}$.
+  \end{enumerate}
+\end{solution}
+%% <<< snippet
+\end{document}

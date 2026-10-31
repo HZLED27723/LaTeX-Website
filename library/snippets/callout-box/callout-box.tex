@@ -1,0 +1,32 @@
+\documentclass{article}
+\pagestyle{empty}
+
+%% >>> preamble
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\newtcolorbox{notebox}[1][Note]{
+  enhanced, breakable,
+  colback=blue!4!white, colframe=blue!55!black,
+  fonttitle=\bfseries, title={#1},
+  boxrule=0.6pt, arc=2mm, left=6pt, right=6pt
+}
+\newtcolorbox{warnbox}[1][Watch out]{
+  enhanced, breakable,
+  colback=orange!6!white, colframe=orange!75!black,
+  fonttitle=\bfseries, title={#1},
+  boxrule=0.6pt, arc=2mm, left=6pt, right=6pt
+}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\begin{notebox}
+  Boxes are great for definitions, summaries or exam tips.
+\end{notebox}
+
+\begin{warnbox}[Common mistake]
+  Forgetting to compile twice leaves \textbf{??} where your
+  cross-references should be.
+\end{warnbox}
+%% <<< snippet
+\end{document}

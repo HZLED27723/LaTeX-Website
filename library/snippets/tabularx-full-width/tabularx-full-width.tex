@@ -1,0 +1,26 @@
+\documentclass{article}
+\pagestyle{empty}
+
+%% >>> preamble
+\usepackage{booktabs}
+\usepackage{tabularx}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\begin{table}[htbp]
+  \centering
+  \caption{Packages I use for tables.}
+  \label{tab:packages}
+  \begin{tabularx}{\textwidth}{@{}l l >{\raggedright\arraybackslash}X@{}}
+    \toprule
+    Package           & Purpose             & Notes \\
+    \midrule
+    \texttt{booktabs} & Professional rules  & Replaces \texttt{\textbackslash hline} with top, middle and bottom rules and fixes the spacing around them. \\
+    \texttt{tabularx} & Fixed-width tables  & The \texttt{X} column takes up the remaining width and wraps its text automatically. \\
+    \texttt{siunitx}  & Numbers and units   & Aligns numbers on the decimal point with the \texttt{S} column type. \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+%% <<< snippet
+\end{document}

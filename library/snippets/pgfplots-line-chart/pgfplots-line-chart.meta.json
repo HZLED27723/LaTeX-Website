@@ -1,0 +1,38 @@
+{
+  "id": "pgfplots-line-chart",
+  "name": "Line chart (pgfplots)",
+  "type": "snippet",
+  "category": [
+    "figures",
+    "plots"
+  ],
+  "tags": [
+    "plot",
+    "chart",
+    "graph",
+    "pgfplots",
+    "axis",
+    "legend",
+    "tikz",
+    "data"
+  ],
+  "requires": [
+    "pgfplots"
+  ],
+  "description": "A line chart drawn natively in LaTeX: two data series and a function, with a grid and legend.",
+  "notes": [
+    "Always set `\\pgfplotsset{compat=...}` or you'll get old, ugly defaults and a warning.",
+    "Plot a CSV directly: `\\addplot table [x=epoch, y=loss, col sep=comma] {data.csv};`",
+    "Fonts match your document automatically, which a matplotlib PNG never does.",
+    "Lots of points making it slow? Export from matplotlib with `tikzplotlib`, or use `external` to cache."
+  ],
+  "links": [
+    {
+      "label": "pgfplots on CTAN",
+      "url": "https://ctan.org/pkg/pgfplots"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": true,
+  "preview": "preview.svg"
+}
