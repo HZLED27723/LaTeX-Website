@@ -777,13 +777,13 @@ code{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.86em;
 .card:hover{transform:translateY(-4px); border-color:var(--line-strong);
   box-shadow:0 1px 0 var(--line-strong),0 26px 50px -26px rgba(27,26,22,.55)}
 .canvas{
-  aspect-ratio:4/3; display:grid; place-items:center; padding:20px;
+  aspect-ratio:4/3; display:grid; place-items:center; place-content:center; padding:20px;
   background:
     linear-gradient(rgba(0,0,0,.028) 1px,transparent 1px),
     linear-gradient(90deg,rgba(0,0,0,.028) 1px,transparent 1px) #fcfcfa;
   background-size:18px 18px; border-bottom:1px solid var(--line);
 }
-.canvas img{max-width:100%; max-height:150px; width:auto; height:auto}
+.canvas img{max-width:100%; max-height:150px; width:auto; height:auto; display:block}
 .card-meta{padding:13px 15px 16px}
 .card-meta h3{margin:.35em 0 .15em; font-family:"Fraunces",serif; font-weight:600;
   font-size:1.12rem; letter-spacing:-.01em}
@@ -814,9 +814,9 @@ code{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.86em;
     linear-gradient(rgba(0,0,0,.03) 1px,transparent 1px),
     linear-gradient(90deg,rgba(0,0,0,.03) 1px,transparent 1px) #fff;
   background-size:22px 22px; border:1px solid var(--line); border-radius:12px;
-  padding:30px; display:grid; place-items:center; box-shadow:var(--shadow); min-height:240px;
+  padding:30px; display:grid; place-items:center; place-content:center; box-shadow:var(--shadow); min-height:240px;
 }
-.item-canvas img{max-width:100%; max-height:360px}
+.item-canvas img{max-width:100%; max-height:360px; display:block}
 .item-head h1{font-family:"Fraunces",serif; font-weight:900; letter-spacing:-.02em;
   font-size:clamp(1.8rem,4vw,2.6rem); margin:.3em 0 .15em; line-height:1.05}
 .item-head .lede{font-family:"Fraunces",serif; color:#34322b; margin:.2em 0 1em}
