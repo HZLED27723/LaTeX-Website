@@ -4,7 +4,7 @@
 
 ### Write it once. Reuse it forever.
 
-My personal library of LaTeX snippets, preambles and document templates.
+My personal library of LaTeX snippets, preambles, templates and icons.
 Every entry compiles, has a rendered preview, and is one click from my clipboard.
 
 **[Live site](https://hzled27723.github.io/LaTeX-Website/)** · [Adding an entry](#adding-an-entry) · [Building the site](#building-the-site) · [How it's organised](#how-its-organised) · [Publishing](#publishing-on-github-pages)
@@ -17,13 +17,14 @@ Every time I work out how to do something in LaTeX (a table layout, an equation
 style, a preamble that just works), I log it here. When I start a new document
 I search the site, copy the **preamble** lines and the **snippet**, and I'm done.
 
-Three kinds of entry:
+Four kinds of entry:
 
 | Type | What it is | Example |
 | --- | --- | --- |
 | **Snippet** | A piece of document body + the packages it needs | booktabs table, aligned equations, side-by-side figures |
 | **Preamble** | A reusable setup block. Also downloadable as a `.sty` | everyday packages, maths macros, heading styles |
 | **Template** | A complete starting document | article, lab report, Beamer slides, homework |
+| **Icon** | A TikZ icon for a tool or skill. Also downloadable as SVG/PNG | Claude, LaTeX, Python, SolidWorks, MATLAB, Excel |
 
 ## Adding an entry
 
@@ -86,6 +87,22 @@ main button copies the whole file.
 Then build (next section). Or skip the local build and just commit the `.tex` + `.meta.json`.
 GitHub renders the preview and redeploys the site for you.
 
+**Adding an icon** for a new skill or tool works the same way:
+
+```bash
+python3 tools/new_entry.py icon "Arduino" --category brands,electronics
+```
+
+It starts as a coloured "skill badge" tile. Change the colour and text, or paste
+in a real logo as a TikZ path.
+
+> **About the brand icons:** Anthropic, Claude, LaTeX, Overleaf, Python, NumPy,
+> Jupyter, Git and GitHub are the real marks, imported from
+> [OpenTikZ](https://github.com/opentikz/opentikz) (CC0, shapes from simple-icons).
+> OpenAI, SolidWorks, Fusion 360, Onshape, MATLAB, Excel and Typst are simple
+> skill badges in each brand's colour, drawn from scratch, not the official logos.
+> All logos stay trademarks of their owners and are here only to identify the tool.
+
 > Need an image in a snippet? Save it next to the `.tex` and `\includegraphics` it
 > by relative path. Previews compile from the entry's own folder.
 
@@ -137,6 +154,7 @@ LaTeX-Website/
     snippets/<id>/          <id>.tex + <id>.meta.json + preview.svg
     preambles/<id>/
     templates/<id>/
+    icons/<id>/
   tools/
     new_entry.py            scaffold a new entry
     validate.py             check metadata + compile every entry

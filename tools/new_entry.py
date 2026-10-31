@@ -4,6 +4,7 @@
   python3 tools/new_entry.py snippet "Booktabs table" --category tables --tags table,booktabs
   python3 tools/new_entry.py preamble "Thesis preamble" --category setup
   python3 tools/new_entry.py template "Lab report" --category documents
+  python3 tools/new_entry.py icon "Arduino" --category brands,electronics
 
 Creates library/<type>s/<id>/ with:
   <id>.tex        a compilable starting point with %% >>> preamble / snippet markers
@@ -76,7 +77,26 @@ Start writing here.
 \end{document}
 """
 
-STARTERS = {"snippet": SNIPPET_TEX, "preamble": PREAMBLE_TEX, "template": TEMPLATE_TEX}
+ICON_TEX = r"""\documentclass[border=4pt]{standalone}
+
+%% >>> preamble
+\usepackage{tikz}
+\definecolor{brandcolor}{HTML}{0072B2}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\begin{tikzpicture}
+  \fill[brandcolor, rounded corners=0.45cm] (0,0) rectangle (2.5,2.5);
+  \node[white, font=\fontfamily{phv}\fontseries{b}\fontsize{26}{26}\selectfont]
+    at (1.25,1.25) {Ab};
+\end{tikzpicture}
+%% <<< snippet
+\end{document}
+"""
+
+STARTERS = {"snippet": SNIPPET_TEX, "preamble": PREAMBLE_TEX, "template": TEMPLATE_TEX,
+            "icon": ICON_TEX}
 
 
 def slugify(name: str) -> str:
@@ -118,7 +138,7 @@ def main(argv: list[str] | None = None) -> int:
         "type": args.type,
         "category": split_list(args.category) or ["general"],
         "tags": split_list(args.tags),
-        "requires": ["geometry", "amsmath"] if args.type == "template" else ["amsmath"],
+        "requires": {"template": ["geometry", "amsmath"], "icon": ["tikz"]}.get(args.type, ["amsmath"]),
         "description": args.description or f"TODO: what does {args.name} do?",
         "notes": ["TODO: gotchas, tips, or where you found this."],
         "added": dt.date.today().isoformat(),

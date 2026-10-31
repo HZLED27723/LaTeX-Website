@@ -1,0 +1,30 @@
+{
+  "id": "fusion-360",
+  "name": "Fusion 360",
+  "type": "icon",
+  "category": [
+    "brands",
+    "cad"
+  ],
+  "tags": [
+    "fusion 360",
+    "fusion",
+    "autodesk",
+    "cad",
+    "cam",
+    "3d",
+    "skill"
+  ],
+  "requires": [
+    "tikz"
+  ],
+  "description": "Fusion 360 skill badge: an orange tile with a big F and 360.",
+  "notes": [
+    "This is a simple **skill badge** in the brand's colour, not the official logo. Official marks for this brand aren't in the free icon sets I use.",
+    "Change the colour once via the `\\definecolor` in the preamble.",
+    "Resize with `[scale=...]` on the tikzpicture, or grab the SVG/PNG for a CV or slide."
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

@@ -2,6 +2,480 @@
   {
     "added": "2026-10-31",
     "category": [
+      "brands",
+      "ai"
+    ],
+    "description": "Anthropic brand mark, official brand color.",
+    "featured": false,
+    "id": "anthropic",
+    "name": "Anthropic",
+    "notes": [
+      "Official brand colour is defined once in the preamble. Change that one `\\definecolor` to make it monochrome.",
+      "The path is pre-scaled to about 2.5cm; resize with `[scale=...]` on the tikzpicture.",
+      "Imported from [OpenTikZ](https://github.com/opentikz/opentikz) (shape data from simple-icons, CC0)."
+    ],
+    "path": "library/icons/anthropic",
+    "preview": "preview.svg",
+    "requires": [
+      "tikz"
+    ],
+    "tags": [
+      "ai",
+      "anthropic",
+      "claude",
+      "company",
+      "llm",
+      "skill"
+    ],
+    "type": "icon"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "brands",
+      "ai"
+    ],
+    "description": "Claude brand mark (Anthropic), official brand color.",
+    "featured": false,
+    "id": "claude",
+    "name": "Claude",
+    "notes": [
+      "Official brand colour is defined once in the preamble. Change that one `\\definecolor` to make it monochrome.",
+      "The path is pre-scaled to about 2.5cm; resize with `[scale=...]` on the tikzpicture.",
+      "Imported from [OpenTikZ](https://github.com/opentikz/opentikz) (shape data from simple-icons, CC0)."
+    ],
+    "path": "library/icons/claude",
+    "preview": "preview.svg",
+    "requires": [
+      "tikz"
+    ],
+    "tags": [
+      "ai",
+      "anthropic",
+      "assistant",
+      "claude",
+      "llm",
+      "skill"
+    ],
+    "type": "icon"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "brands",
+      "office"
+    ],
+    "description": "Excel skill badge: a green tile with a spreadsheet-grid motif.",
+    "featured": false,
+    "id": "excel",
+    "name": "Excel",
+    "notes": [
+      "This is a simple **skill badge** in the brand's colour, not the official logo. Official marks for this brand aren't in the free icon sets I use.",
+      "Change the colour once via the `\\definecolor` in the preamble.",
+      "Resize with `[scale=...]` on the tikzpicture, or grab the SVG/PNG for a CV or slide."
+    ],
+    "path": "library/icons/excel",
+    "preview": "preview.svg",
+    "requires": [
+      "tikz"
+    ],
+    "tags": [
+      "excel",
+      "microsoft",
+      "spreadsheet",
+      "office",
+      "data",
+      "skill"
+    ],
+    "type": "icon"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "brands",
+      "cad"
+    ],
+    "description": "Fusion 360 skill badge: an orange tile with a big F and 360.",
+    "featured": false,
+    "id": "fusion-360",
+    "name": "Fusion 360",
+    "notes": [
+      "This is a simple **skill badge** in the brand's colour, not the official logo. Official marks for this brand aren't in the free icon sets I use.",
+      "Change the colour once via the `\\definecolor` in the preamble.",
+      "Resize with `[scale=...]` on the tikzpicture, or grab the SVG/PNG for a CV or slide."
+    ],
+    "path": "library/icons/fusion-360",
+    "preview": "preview.svg",
+    "requires": [
+      "tikz"
+    ],
+    "tags": [
+      "fusion 360",
+      "fusion",
+      "autodesk",
+      "cad",
+      "cam",
+      "3d",
+      "skill"
+    ],
+    "type": "icon"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "brands",
+      "tools"
+    ],
+    "description": "Git brand mark, official brand color.",
+    "featured": false,
+    "id": "git",
+    "name": "Git",
+    "notes": [
+      "Official brand colour is defined once in the preamble. Change that one `\\definecolor` to make it monochrome.",
+      "The path is pre-scaled to about 2.5cm; resize with `[scale=...]` on the tikzpicture.",
+      "Imported from [OpenTikZ](https://github.com/opentikz/opentikz) (shape data from simple-icons, CC0)."
+    ],
+    "path": "library/icons/git",
+    "preview": "preview.svg",
+    "requires": [
+      "tikz"
+    ],
+    "tags": [
+      "branch",
+      "git",
+      "vcs",
+      "version control",
+      "skill"
+    ],
+    "type": "icon"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "brands",
+      "tools"
+    ],
+    "description": "GitHub brand mark (Octocat silhouette), official brand color.",
+    "featured": false,
+    "id": "github",
+    "name": "GitHub",
+    "notes": [
+      "Official brand colour is defined once in the preamble. Change that one `\\definecolor` to make it monochrome.",
+      "The path is pre-scaled to about 2.5cm; resize with `[scale=...]` on the tikzpicture.",
+      "Imported from [OpenTikZ](https://github.com/opentikz/opentikz) (shape data from simple-icons, CC0)."
+    ],
+    "path": "library/icons/github",
+    "preview": "preview.svg",
+    "requires": [
+      "tikz"
+    ],
+    "tags": [
+      "code hosting",
+      "github",
+      "open source",
+      "repository",
+      "skill"
+    ],
+    "type": "icon"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "brands",
+      "programming"
+    ],
+    "description": "Jupyter brand mark (three moons), official brand color.",
+    "featured": false,
+    "id": "jupyter",
+    "name": "Jupyter",
+    "notes": [
+      "Official brand colour is defined once in the preamble. Change that one `\\definecolor` to make it monochrome.",
+      "The path is pre-scaled to about 2.5cm; resize with `[scale=...]` on the tikzpicture.",
+      "Imported from [OpenTikZ](https://github.com/opentikz/opentikz) (shape data from simple-icons, CC0)."
+    ],
+    "path": "library/icons/jupyter",
+    "preview": "preview.svg",
+    "requires": [
+      "tikz"
+    ],
+    "tags": [
+      "jupyter",
+      "notebook",
+      "python",
+      "tooling",
+      "skill"
+    ],
+    "type": "icon"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "brands",
+      "writing"
+    ],
+    "description": "LaTeX wordmark, official brand color.",
+    "featured": false,
+    "id": "latex",
+    "name": "LaTeX",
+    "notes": [
+      "Official brand colour is defined once in the preamble. Change that one `\\definecolor` to make it monochrome.",
+      "The path is pre-scaled to about 2.5cm; resize with `[scale=...]` on the tikzpicture.",
+      "Imported from [OpenTikZ](https://github.com/opentikz/opentikz) (shape data from simple-icons, CC0)."
+    ],
+    "path": "library/icons/latex",
+    "preview": "preview.svg",
+    "requires": [
+      "tikz"
+    ],
+    "tags": [
+      "latex",
+      "tex",
+      "typesetting",
+      "writing",
+      "skill"
+    ],
+    "type": "icon"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "brands",
+      "programming"
+    ],
+    "description": "MATLAB skill badge: a navy tile with an orange wave-surface motif.",
+    "featured": false,
+    "id": "matlab",
+    "name": "MATLAB",
+    "notes": [
+      "This is a simple **skill badge** in the brand's colour, not the official logo. Official marks for this brand aren't in the free icon sets I use.",
+      "Change the colour once via the `\\definecolor` in the preamble.",
+      "Resize with `[scale=...]` on the tikzpicture, or grab the SVG/PNG for a CV or slide."
+    ],
+    "path": "library/icons/matlab",
+    "preview": "preview.svg",
+    "requires": [
+      "tikz"
+    ],
+    "tags": [
+      "matlab",
+      "mathworks",
+      "numerical",
+      "simulink",
+      "programming",
+      "skill"
+    ],
+    "type": "icon"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "brands",
+      "programming"
+    ],
+    "description": "NumPy brand mark, official brand color.",
+    "featured": false,
+    "id": "numpy",
+    "name": "NumPy",
+    "notes": [
+      "Official brand colour is defined once in the preamble. Change that one `\\definecolor` to make it monochrome.",
+      "The path is pre-scaled to about 2.5cm; resize with `[scale=...]` on the tikzpicture.",
+      "Imported from [OpenTikZ](https://github.com/opentikz/opentikz) (shape data from simple-icons, CC0)."
+    ],
+    "path": "library/icons/numpy",
+    "preview": "preview.svg",
+    "requires": [
+      "tikz"
+    ],
+    "tags": [
+      "array",
+      "numpy",
+      "python",
+      "scientific computing",
+      "skill"
+    ],
+    "type": "icon"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "brands",
+      "cad"
+    ],
+    "description": "Onshape skill badge: a blue tile with a ring motif and the name.",
+    "featured": false,
+    "id": "onshape",
+    "name": "Onshape",
+    "notes": [
+      "This is a simple **skill badge** in the brand's colour, not the official logo. Official marks for this brand aren't in the free icon sets I use.",
+      "Change the colour once via the `\\definecolor` in the preamble.",
+      "Resize with `[scale=...]` on the tikzpicture, or grab the SVG/PNG for a CV or slide."
+    ],
+    "path": "library/icons/onshape",
+    "preview": "preview.svg",
+    "requires": [
+      "tikz"
+    ],
+    "tags": [
+      "onshape",
+      "cad",
+      "cloud cad",
+      "ptc",
+      "3d",
+      "skill"
+    ],
+    "type": "icon"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "brands",
+      "ai"
+    ],
+    "description": "OpenAI skill badge: a black tile with the name in white.",
+    "featured": false,
+    "id": "openai",
+    "name": "OpenAI",
+    "notes": [
+      "This is a simple **skill badge** in the brand's colour, not the official logo. Official marks for this brand aren't in the free icon sets I use.",
+      "Change the colour once via the `\\definecolor` in the preamble.",
+      "Resize with `[scale=...]` on the tikzpicture, or grab the SVG/PNG for a CV or slide."
+    ],
+    "path": "library/icons/openai",
+    "preview": "preview.svg",
+    "requires": [
+      "tikz"
+    ],
+    "tags": [
+      "openai",
+      "chatgpt",
+      "gpt",
+      "ai",
+      "llm",
+      "skill"
+    ],
+    "type": "icon"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "brands",
+      "writing"
+    ],
+    "description": "Overleaf brand mark, official brand color.",
+    "featured": false,
+    "id": "overleaf",
+    "name": "Overleaf",
+    "notes": [
+      "Official brand colour is defined once in the preamble. Change that one `\\definecolor` to make it monochrome.",
+      "The path is pre-scaled to about 2.5cm; resize with `[scale=...]` on the tikzpicture.",
+      "Imported from [OpenTikZ](https://github.com/opentikz/opentikz) (shape data from simple-icons, CC0)."
+    ],
+    "path": "library/icons/overleaf",
+    "preview": "preview.svg",
+    "requires": [
+      "tikz"
+    ],
+    "tags": [
+      "editor",
+      "latex",
+      "overleaf",
+      "writing",
+      "skill"
+    ],
+    "type": "icon"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "brands",
+      "programming"
+    ],
+    "description": "Python brand mark (two snakes), official brand color.",
+    "featured": false,
+    "id": "python",
+    "name": "Python",
+    "notes": [
+      "Official brand colour is defined once in the preamble. Change that one `\\definecolor` to make it monochrome.",
+      "The path is pre-scaled to about 2.5cm; resize with `[scale=...]` on the tikzpicture.",
+      "Imported from [OpenTikZ](https://github.com/opentikz/opentikz) (shape data from simple-icons, CC0)."
+    ],
+    "path": "library/icons/python",
+    "preview": "preview.svg",
+    "requires": [
+      "tikz"
+    ],
+    "tags": [
+      "language",
+      "programming",
+      "python",
+      "snake",
+      "skill"
+    ],
+    "type": "icon"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "brands",
+      "cad"
+    ],
+    "description": "SolidWorks skill badge: a red tile with a bold italic SW monogram.",
+    "featured": false,
+    "id": "solidworks",
+    "name": "SolidWorks",
+    "notes": [
+      "This is a simple **skill badge** in the brand's colour, not the official logo. Official marks for this brand aren't in the free icon sets I use.",
+      "Change the colour once via the `\\definecolor` in the preamble.",
+      "Resize with `[scale=...]` on the tikzpicture, or grab the SVG/PNG for a CV or slide."
+    ],
+    "path": "library/icons/solidworks",
+    "preview": "preview.svg",
+    "requires": [
+      "tikz"
+    ],
+    "tags": [
+      "solidworks",
+      "cad",
+      "3d",
+      "modelling",
+      "dassault",
+      "skill"
+    ],
+    "type": "icon"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
+      "brands",
+      "writing"
+    ],
+    "description": "Typst skill badge: a teal tile with the name in lowercase.",
+    "featured": false,
+    "id": "typst",
+    "name": "Typst",
+    "notes": [
+      "This is a simple **skill badge** in the brand's colour, not the official logo. Official marks for this brand aren't in the free icon sets I use.",
+      "Change the colour once via the `\\definecolor` in the preamble.",
+      "Resize with `[scale=...]` on the tikzpicture, or grab the SVG/PNG for a CV or slide."
+    ],
+    "path": "library/icons/typst",
+    "preview": "preview.svg",
+    "requires": [
+      "tikz"
+    ],
+    "tags": [
+      "typst",
+      "typesetting",
+      "markup",
+      "latex alternative",
+      "writing",
+      "skill"
+    ],
+    "type": "icon"
+  },
+  {
+    "added": "2026-10-31",
+    "category": [
       "setup"
     ],
     "description": "My go-to set of packages for any article or report: fonts, margins, maths, tables, figures, links.",
