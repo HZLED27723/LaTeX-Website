@@ -1,0 +1,29 @@
+\documentclass{article}
+\pagestyle{empty}
+
+%% >>> preamble
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, allcolors=blue!60!black]{hyperref}
+\usepackage[capitalise, noabbrev]{cleveref}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\section{Method}\label{sec:method}
+We minimise the loss in \cref{eq:loss}, introduced in \cref{sec:method}.
+\Cref{fig:demo} shows the pipeline.
+
+\begin{equation}\label{eq:loss}
+  \mathcal{L} = \frac{1}{n} \sum_{i=1}^{n} \ell(y_i, \hat{y}_i)
+\end{equation}
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{\rule{0pt}{1.2cm}\rule{5cm}{0pt}}
+  \caption{A placeholder figure.}
+  \label{fig:demo}
+\end{figure}
+%% <<< snippet
+\end{document}

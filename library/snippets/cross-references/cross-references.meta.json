@@ -1,0 +1,44 @@
+{
+  "id": "cross-references",
+  "name": "Smart cross-references (cleveref)",
+  "type": "snippet",
+  "category": [
+    "references"
+  ],
+  "tags": [
+    "ref",
+    "cref",
+    "cleveref",
+    "hyperref",
+    "label",
+    "link",
+    "cross-reference"
+  ],
+  "requires": [
+    "amsmath",
+    "graphicx",
+    "xcolor",
+    "hyperref",
+    "cleveref"
+  ],
+  "description": "`\\cref` writes \"Figure 1\", \"Equation (2)\", \"Section 1\" for you, as clickable links.",
+  "notes": [
+    "Load order matters: `xcolor` before `hyperref` (for colour mixes like `blue!60!black`), `hyperref` near the end, `cleveref` **after** it.",
+    "`\\cref{a,b}` handles lists (\"Figures 1 and 2\"). Use `\\Cref` at the start of a sentence.",
+    "`[capitalise, noabbrev]` gives \"Figure 1\" instead of \"fig. 1\".",
+    "Labels: use prefixes like `fig:`, `tab:`, `eq:`, `sec:` so you can tell them apart."
+  ],
+  "links": [
+    {
+      "label": "cleveref on CTAN",
+      "url": "https://ctan.org/pkg/cleveref"
+    },
+    {
+      "label": "hyperref on CTAN",
+      "url": "https://ctan.org/pkg/hyperref"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

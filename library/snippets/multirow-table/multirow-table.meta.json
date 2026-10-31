@@ -1,0 +1,35 @@
+{
+  "id": "multirow-table",
+  "name": "Merged cells (multirow / multicolumn)",
+  "type": "snippet",
+  "category": [
+    "tables"
+  ],
+  "tags": [
+    "table",
+    "multirow",
+    "multicolumn",
+    "merge",
+    "span",
+    "cmidrule"
+  ],
+  "requires": [
+    "booktabs",
+    "multirow"
+  ],
+  "description": "Cells spanning several rows or columns, with a partial rule under a grouped header.",
+  "notes": [
+    "`\\multicolumn{n}{c}{text}` spans *n* columns. It's built in, no package needed.",
+    "`\\multirow{n}{*}{text}` spans *n* rows. Leave the cells below it empty.",
+    "`\\cmidrule(l){3-4}` draws a rule under columns 3–4; `(l)`/`(r)` trim its ends so neighbouring rules don't touch."
+  ],
+  "links": [
+    {
+      "label": "multirow on CTAN",
+      "url": "https://ctan.org/pkg/multirow"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

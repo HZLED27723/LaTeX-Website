@@ -1,0 +1,35 @@
+\documentclass{article}
+\pagestyle{empty}
+
+%% >>> preamble
+\usepackage[inline]{enumitem}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+Compact bullets:
+\begin{itemize}[noitemsep, topsep=2pt]
+  \item no extra space between items
+  \item handy in slides and CVs
+\end{itemize}
+
+Lettered:
+\begin{enumerate}[label=(\alph*), noitemsep]
+  \item first part
+  \item second part
+\end{enumerate}
+
+Custom labels:
+\begin{enumerate}[label=\textbf{Step \arabic*:}, leftmargin=*, align=left, noitemsep]
+  \item Download the data.
+  \item Clean and normalise it.
+\end{enumerate}
+
+Inline: you need
+\begin{enumerate*}[label=(\roman*)]
+  \item a question,
+  \item some data, and
+  \item patience.
+\end{enumerate*}
+%% <<< snippet
+\end{document}

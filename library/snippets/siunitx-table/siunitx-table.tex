@@ -1,0 +1,28 @@
+\documentclass{article}
+\pagestyle{empty}
+
+%% >>> preamble
+\usepackage{booktabs}
+\usepackage{siunitx}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+In text: $g = \qty{9.81}{\metre\per\second\squared}$ and $N_A = \num{6.022e23}$.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Numbers aligned on the decimal point.}
+  \label{tab:siunitx}
+  \begin{tabular}{@{}l S[table-format=2.3] S[table-format=4.1] S[table-format=1.2e-1]@{}}
+    \toprule
+    Sample & {Mass (\unit{\gram})} & {Temp.\ (\unit{\kelvin})} & {Rate (\unit{\per\second})} \\
+    \midrule
+    A      & 12.345 & 293.1  & 1.20e-3 \\
+    B      &  3.2   & 1013.5 & 4.75e-2 \\
+    C      & 45.06  & 77.4   & 9.81e-1 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+%% <<< snippet
+\end{document}

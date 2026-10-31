@@ -1,0 +1,30 @@
+\documentclass{article}
+\pagestyle{empty}
+
+%% >>> preamble
+\usepackage{graphicx}
+\usepackage{subcaption}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\begin{figure}[htbp]
+  \centering
+  \begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{example-image-a}
+    \caption{The first panel.}
+    \label{fig:left}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{example-image-b}
+    \caption{The second panel.}
+    \label{fig:right}
+  \end{subfigure}
+  \caption{Two figures side by side: \subref{fig:left} and \subref{fig:right}.}
+  \label{fig:pair}
+\end{figure}
+%% <<< snippet
+\end{document}

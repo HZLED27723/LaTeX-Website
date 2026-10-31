@@ -1,0 +1,38 @@
+{
+  "id": "siunitx-table",
+  "name": "Decimal-aligned numbers & units (siunitx)",
+  "type": "snippet",
+  "category": [
+    "tables",
+    "units"
+  ],
+  "tags": [
+    "siunitx",
+    "units",
+    "decimal",
+    "align",
+    "S column",
+    "scientific notation",
+    "qty",
+    "num"
+  ],
+  "requires": [
+    "booktabs",
+    "siunitx"
+  ],
+  "description": "Numbers aligned on the decimal point with the `S` column, plus consistent units in text.",
+  "notes": [
+    "`table-format=2.3` means 2 integer digits and 3 decimals. It reserves the right width so the column is centred.",
+    "Wrap non-numeric header cells in braces `{...}` or siunitx tries to parse them as numbers.",
+    "In text: `\\qty{9.81}{\\metre\\per\\second\\squared}`, `\\num{6.022e23}`, `\\unit{\\kilo\\gram}` (siunitx v3 names)."
+  ],
+  "links": [
+    {
+      "label": "siunitx on CTAN",
+      "url": "https://ctan.org/pkg/siunitx"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

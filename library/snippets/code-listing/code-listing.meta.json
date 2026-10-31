@@ -1,0 +1,37 @@
+{
+  "id": "code-listing",
+  "name": "Code listing with syntax colours",
+  "type": "snippet",
+  "category": [
+    "code"
+  ],
+  "tags": [
+    "code",
+    "listings",
+    "lstlisting",
+    "syntax highlighting",
+    "python",
+    "source code",
+    "verbatim"
+  ],
+  "requires": [
+    "xcolor",
+    "listings"
+  ],
+  "description": "Syntax-highlighted source code with line numbers, a light background and a caption.",
+  "notes": [
+    "`\\lstset{style=mystyle}` applies the style everywhere. Override per listing with `[language=C, ...]`.",
+    "listings doesn't handle UTF-8 (é, ü, →) in code out of the box. Add `literate={é}{{\\'e}}1` or switch to `minted`.",
+    "`minted` has nicer highlighting (Pygments) but needs `-shell-escape`. listings works everywhere, Overleaf included.",
+    "Include a file directly: `\\lstinputlisting[language=Python]{script.py}`."
+  ],
+  "links": [
+    {
+      "label": "listings on CTAN",
+      "url": "https://ctan.org/pkg/listings"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": true,
+  "preview": "preview.svg"
+}

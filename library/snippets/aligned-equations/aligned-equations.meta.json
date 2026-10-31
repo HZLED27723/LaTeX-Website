@@ -1,0 +1,36 @@
+{
+  "id": "aligned-equations",
+  "name": "Aligned & multi-line equations",
+  "type": "snippet",
+  "category": [
+    "math"
+  ],
+  "tags": [
+    "align",
+    "equation",
+    "split",
+    "numbering",
+    "eqref",
+    "multi-line",
+    "amsmath"
+  ],
+  "requires": [
+    "amsmath"
+  ],
+  "description": "`align` for several equations lined up on `=`, and `split` for one long equation with a single number.",
+  "notes": [
+    "`&` marks the alignment point and `\\\\` ends a line. Use `align*` for no numbers at all.",
+    "`\\nonumber` (or `\\notag`) drops the number on a single line.",
+    "Reference with `\\eqref{...}`, which adds the parentheses for you.",
+    "Never use `eqnarray`. Its spacing around `=` is wrong. Use `align`."
+  ],
+  "links": [
+    {
+      "label": "amsmath on CTAN",
+      "url": "https://ctan.org/pkg/amsmath"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": true,
+  "preview": "preview.svg"
+}

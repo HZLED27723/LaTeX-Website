@@ -1,0 +1,43 @@
+{
+  "id": "algorithm-pseudocode",
+  "name": "Algorithm pseudocode",
+  "type": "snippet",
+  "category": [
+    "code",
+    "algorithms"
+  ],
+  "tags": [
+    "algorithm",
+    "pseudocode",
+    "algorithmic",
+    "algpseudocode",
+    "for",
+    "if",
+    "loop"
+  ],
+  "requires": [
+    "amsmath",
+    "algorithm",
+    "algpseudocode"
+  ],
+  "description": "A numbered, captioned algorithm float with Require/Ensure, a loop, a condition and a return.",
+  "notes": [
+    "`[1]` after `algorithmic` numbers every line. Use `[0]` for none.",
+    "Keywords end with an explicit `\\EndFor`, `\\EndIf`, `\\EndWhile` (algpseudocode style).",
+    "Use `\\gets` for assignment (←). It reads better than `=`.",
+    "Rename Require/Ensure to Input/Output: `\\renewcommand{\\algorithmicrequire}{\\textbf{Input:}}`."
+  ],
+  "links": [
+    {
+      "label": "algorithmicx on CTAN",
+      "url": "https://ctan.org/pkg/algorithmicx"
+    },
+    {
+      "label": "algorithms on CTAN",
+      "url": "https://ctan.org/pkg/algorithms"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

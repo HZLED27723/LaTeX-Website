@@ -1,0 +1,36 @@
+{
+  "id": "article-template",
+  "name": "Article",
+  "type": "template",
+  "category": [
+    "documents"
+  ],
+  "tags": [
+    "article",
+    "paper",
+    "essay",
+    "abstract",
+    "template",
+    "starter"
+  ],
+  "requires": [
+    "fontenc",
+    "microtype",
+    "geometry",
+    "amsmath",
+    "amssymb",
+    "graphicx",
+    "booktabs",
+    "xcolor",
+    "hyperref",
+    "cleveref"
+  ],
+  "description": "A complete short article: title, abstract, sections, an equation, a table and references.",
+  "notes": [
+    "Bibliography uses `thebibliography` so it compiles anywhere. Switch to BibTeX/biblatex once you have more than a handful of references.",
+    "Compile twice (or use latexmk) so the references and `\\cref`s resolve."
+  ],
+  "added": "2026-10-31",
+  "featured": true,
+  "preview": "preview.svg"
+}

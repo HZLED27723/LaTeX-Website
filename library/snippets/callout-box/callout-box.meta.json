@@ -1,0 +1,37 @@
+{
+  "id": "callout-box",
+  "name": "Callout boxes (tcolorbox)",
+  "type": "snippet",
+  "category": [
+    "boxes",
+    "layout"
+  ],
+  "tags": [
+    "box",
+    "tcolorbox",
+    "callout",
+    "note",
+    "warning",
+    "highlight",
+    "frame",
+    "admonition"
+  ],
+  "requires": [
+    "tcolorbox"
+  ],
+  "description": "Reusable coloured note and warning boxes with titles. They break across pages.",
+  "notes": [
+    "Define the box once with `\\newtcolorbox` and the optional title argument `[1][Note]` sets a default.",
+    "`breakable` lets long boxes split across pages, and it needs `\\tcbuselibrary{breakable}`.",
+    "Colours mix like `blue!55!black` (55% blue, 45% black). Keep backgrounds very light (`!4!white`)."
+  ],
+  "links": [
+    {
+      "label": "tcolorbox on CTAN",
+      "url": "https://ctan.org/pkg/tcolorbox"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": true,
+  "preview": "preview.svg"
+}

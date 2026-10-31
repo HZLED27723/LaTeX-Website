@@ -1,0 +1,41 @@
+\documentclass{article}
+\pagestyle{empty}
+
+%% >>> preamble
+\usepackage{xcolor}
+\usepackage{listings}
+\definecolor{codebg}{HTML}{F7F6F2}
+\definecolor{codekw}{HTML}{0072B2}
+\definecolor{codestr}{HTML}{009E73}
+\definecolor{codecom}{HTML}{8A8577}
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{codebg},
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{codekw}\bfseries,
+  stringstyle=\color{codestr},
+  commentstyle=\color{codecom}\itshape,
+  numbers=left, numberstyle=\tiny\color{codecom}, numbersep=8pt,
+  frame=single, rulecolor=\color{codebg!70!black},
+  breaklines=true, showstringspaces=false, tabsize=4,
+  xleftmargin=1.8em, framexleftmargin=1.5em, captionpos=b
+}
+\lstset{style=mystyle}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\begin{lstlisting}[language=Python, caption={Fibonacci with memoisation.}]
+from functools import lru_cache
+
+@lru_cache(maxsize=None)
+def fib(n: int) -> int:
+    """Return the n-th Fibonacci number."""
+    if n < 2:
+        return n
+    return fib(n - 1) + fib(n - 2)
+
+print(fib(30))  # 832040
+\end{lstlisting}
+Inline code works too: \lstinline|fib(30)|.
+%% <<< snippet
+\end{document}

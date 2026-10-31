@@ -1,0 +1,22 @@
+# Generated static site (built by tools/build_site.py; deployed by the Pages workflow)
+site/
+
+# LaTeX build artifacts (previews are rendered in a temp dir, but just in case)
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
+*.dvi
+*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+
+# NOTE: preview.svg files and catalog.json are committed on purpose.

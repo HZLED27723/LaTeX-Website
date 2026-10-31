@@ -1,0 +1,35 @@
+{
+  "id": "booktabs-table",
+  "name": "Booktabs table",
+  "type": "snippet",
+  "category": [
+    "tables"
+  ],
+  "tags": [
+    "table",
+    "booktabs",
+    "toprule",
+    "midrule",
+    "caption",
+    "professional"
+  ],
+  "requires": [
+    "booktabs"
+  ],
+  "description": "A clean, publication-style table: no vertical lines, proper rule spacing, caption above.",
+  "notes": [
+    "No vertical lines. booktabs rules look wrong with `|` columns.",
+    "`@{}` at both ends removes the outer padding so the rules line up with the text.",
+    "Put the `\\caption` **above** a table and **below** a figure (the usual convention).",
+    "`\\label` must come *after* `\\caption`, otherwise `\\ref` points at the section number."
+  ],
+  "links": [
+    {
+      "label": "booktabs on CTAN",
+      "url": "https://ctan.org/pkg/booktabs"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": true,
+  "preview": "preview.svg"
+}

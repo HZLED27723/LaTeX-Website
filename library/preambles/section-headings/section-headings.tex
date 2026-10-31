@@ -1,0 +1,24 @@
+\documentclass{article}
+\pagestyle{empty}
+
+%% >>> preamble
+\usepackage{xcolor}
+\usepackage{titlesec}
+\definecolor{headingblue}{HTML}{0072B2}
+\titleformat{\section}
+  {\Large\bfseries\color{headingblue}}{\thesection}{0.8em}{}
+  [{\color{headingblue!40}\titlerule[0.6pt]}]
+\titleformat{\subsection}
+  {\large\bfseries}{\color{headingblue}\thesubsection}{0.8em}{}
+\titlespacing*{\section}{0pt}{2.2ex plus .5ex minus .2ex}{1.2ex}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\section{Introduction}
+Headings now use one accent colour with a thin rule under each section.
+
+\subsection{Background}
+Subsections keep the colour on the number only.
+%% <<< snippet
+\end{document}

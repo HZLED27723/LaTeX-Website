@@ -1,0 +1,35 @@
+{
+  "id": "tabularx-full-width",
+  "name": "Full-width table with wrapping text",
+  "type": "snippet",
+  "category": [
+    "tables"
+  ],
+  "tags": [
+    "table",
+    "tabularx",
+    "wrap",
+    "textwidth",
+    "long text",
+    "X column"
+  ],
+  "requires": [
+    "booktabs",
+    "tabularx"
+  ],
+  "description": "A table stretched to `\\textwidth` where the `X` column wraps long text automatically.",
+  "notes": [
+    "`X` columns share whatever width is left after the other columns.",
+    "`>{\\raggedright\\arraybackslash}X` gives ragged-right text, which reads better than justified text in narrow cells.",
+    "Don't use `\\verb` inside `tabularx`. It reads the whole body as an argument, so `\\verb` breaks."
+  ],
+  "links": [
+    {
+      "label": "tabularx on CTAN",
+      "url": "https://ctan.org/pkg/tabularx"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

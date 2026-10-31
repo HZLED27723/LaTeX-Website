@@ -1,0 +1,30 @@
+\documentclass{article}
+\pagestyle{empty}
+
+%% >>> preamble
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\begin{algorithm}[htbp]
+  \caption{Gradient descent with early stopping}
+  \label{alg:gd}
+  \begin{algorithmic}[1]
+    \Require initial point $\theta_0$, learning rate $\eta > 0$, tolerance $\varepsilon$
+    \Ensure approximate minimiser $\theta$
+    \State $\theta \gets \theta_0$
+    \For{$t = 1, \dots, T$}
+      \State $g \gets \nabla f(\theta)$
+      \If{$\lVert g \rVert < \varepsilon$}
+        \State \textbf{break}
+      \EndIf
+      \State $\theta \gets \theta - \eta\, g$
+    \EndFor
+    \State \Return $\theta$
+  \end{algorithmic}
+\end{algorithm}
+%% <<< snippet
+\end{document}

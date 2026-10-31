@@ -1,0 +1,40 @@
+{
+  "id": "math-macros",
+  "name": "Maths shortcuts & operators",
+  "type": "preamble",
+  "category": [
+    "math",
+    "setup"
+  ],
+  "tags": [
+    "macros",
+    "newcommand",
+    "operators",
+    "argmin",
+    "norm",
+    "abs",
+    "real numbers",
+    "mathtools"
+  ],
+  "requires": [
+    "amsmath",
+    "amssymb",
+    "mathtools"
+  ],
+  "description": "Shortcuts I use constantly: number sets, auto-sizing |abs| and ‖norm‖, argmin, expectation, upright d.",
+  "notes": [
+    "`\\DeclarePairedDelimiter` gives `\\abs{x}` (fixed size) and `\\abs*{x}` (grows to fit, like `\\left|...\\right|`).",
+    "`\\DeclareMathOperator*` (starred) puts subscripts **under** the operator in display maths, as with argmin.",
+    "`\\dd` gives an upright d with correct spacing: `\\int f(x) \\dd x`.",
+    "If a name clashes (e.g. another package defines `\\C`), rename it here once."
+  ],
+  "links": [
+    {
+      "label": "mathtools on CTAN",
+      "url": "https://ctan.org/pkg/mathtools"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

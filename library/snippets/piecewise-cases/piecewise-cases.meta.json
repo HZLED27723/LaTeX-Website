@@ -1,0 +1,32 @@
+{
+  "id": "piecewise-cases",
+  "name": "Piecewise functions (cases)",
+  "type": "snippet",
+  "category": [
+    "math"
+  ],
+  "tags": [
+    "cases",
+    "piecewise",
+    "brace",
+    "conditional",
+    "amsmath"
+  ],
+  "requires": [
+    "amsmath"
+  ],
+  "description": "Piecewise definitions with a left brace and conditions, using `cases`.",
+  "notes": [
+    "Use `\\text{if } ...` for words inside maths so they get normal spacing and an upright font.",
+    "Want full-size fractions in the cases? Load `mathtools` and use `dcases` instead."
+  ],
+  "links": [
+    {
+      "label": "amsmath on CTAN",
+      "url": "https://ctan.org/pkg/amsmath"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

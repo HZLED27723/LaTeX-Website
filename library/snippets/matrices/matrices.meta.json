@@ -1,0 +1,36 @@
+{
+  "id": "matrices",
+  "name": "Matrices & determinants",
+  "type": "snippet",
+  "category": [
+    "math"
+  ],
+  "tags": [
+    "matrix",
+    "bmatrix",
+    "pmatrix",
+    "vmatrix",
+    "determinant",
+    "augmented",
+    "linear algebra"
+  ],
+  "requires": [
+    "amsmath"
+  ],
+  "description": "The matrix environments, with (), [] and || delimiters, dots, and an augmented matrix.",
+  "notes": [
+    "`pmatrix` gives ( ), `bmatrix` [ ], `Bmatrix` { }, `vmatrix` | | (determinant), `Vmatrix` ‖ ‖.",
+    "Dots: `\\cdots` (horizontal), `\\vdots`, `\\ddots`.",
+    "Augmented matrix: an `array` with `|` in the column spec, wrapped in `\\left[ ... \\right]`.",
+    "Inline in text: `$\\left(\\begin{smallmatrix} a & b \\\\ c & d \\end{smallmatrix}\\right)$`."
+  ],
+  "links": [
+    {
+      "label": "amsmath on CTAN",
+      "url": "https://ctan.org/pkg/amsmath"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "section-headings",
+  "name": "Coloured section headings",
+  "type": "preamble",
+  "category": [
+    "layout",
+    "setup"
+  ],
+  "tags": [
+    "titlesec",
+    "section",
+    "heading",
+    "colour",
+    "style",
+    "titleformat",
+    "rule"
+  ],
+  "requires": [
+    "xcolor",
+    "titlesec"
+  ],
+  "description": "Restyle `\\section` and `\\subsection`: a coloured heading with a thin rule underneath.",
+  "notes": [
+    "`\\titleformat{cmd}{format}{label}{sep}{before-code}[after-code]`. The rule goes in the optional last argument.",
+    "`\\titlespacing*{\\section}{left}{before}{after}`. The `*` removes the indent of the paragraph that follows.",
+    "Change `headingblue` once and every heading follows."
+  ],
+  "links": [
+    {
+      "label": "titlesec on CTAN",
+      "url": "https://ctan.org/pkg/titlesec"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

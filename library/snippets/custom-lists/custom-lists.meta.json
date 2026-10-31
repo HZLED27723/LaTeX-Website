@@ -1,0 +1,37 @@
+{
+  "id": "custom-lists",
+  "name": "Custom lists (enumitem)",
+  "type": "snippet",
+  "category": [
+    "lists"
+  ],
+  "tags": [
+    "itemize",
+    "enumerate",
+    "enumitem",
+    "list",
+    "spacing",
+    "label",
+    "inline list",
+    "bullet"
+  ],
+  "requires": [
+    "enumitem"
+  ],
+  "description": "Compact bullets, (a)/(b) labels, \"Step 1:\" labels and inline lists, all with enumitem.",
+  "notes": [
+    "`noitemsep` removes the gap between items. `nosep` removes every gap, top and bottom included.",
+    "Label counters: `\\arabic*` 1, `\\alph*` a, `\\Alph*` A, `\\roman*` i, `\\Roman*` I.",
+    "Inline lists need the `[inline]` package option and the starred environments (`enumerate*`).",
+    "Set it globally: `\\setlist[itemize]{noitemsep}`."
+  ],
+  "links": [
+    {
+      "label": "enumitem on CTAN",
+      "url": "https://ctan.org/pkg/enumitem"
+    }
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

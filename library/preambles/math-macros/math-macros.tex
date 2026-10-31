@@ -1,0 +1,46 @@
+\documentclass{article}
+\pagestyle{empty}
+
+%% >>> preamble
+\usepackage{amsmath, amssymb, mathtools}
+% number sets
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+% delimiters: \abs{x} fixed size, \abs*{x} auto-sized
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\inner}{\langle}{\rangle}
+% operators
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Var}{Var}
+% upright differential: \int f(x) \dd x
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+% bold vectors and matrices
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\mathbf{#1}}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+For $\vect{x} \in \R^n$ and $\mat{A} \in \R^{n \times n}$:
+\[
+  \hat{\vect{\theta}} = \argmin_{\vect{\theta} \in \R^d}
+    \norm*{\mat{X}\vect{\theta} - \vect{y}}_2^2
+  \qquad
+  \E[X] = \int_{\R} x \, p(x) \dd x
+\]
+\[
+  \abs*{\frac{a}{b}} \le \ceil{\tr(\mat{A})}
+  \qquad
+  \inner{\vect{u}, \vect{v}} = \sum_{i \in \N} u_i v_i
+\]
+%% <<< snippet
+\end{document}

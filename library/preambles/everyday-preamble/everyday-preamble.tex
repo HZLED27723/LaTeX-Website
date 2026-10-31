@@ -1,0 +1,34 @@
+\documentclass{article}
+\pagestyle{empty}
+
+%% >>> preamble
+% --- fonts & typography ---
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+% --- page layout ---
+\usepackage[a4paper, margin=2.5cm]{geometry}
+% --- maths ---
+\usepackage{amsmath, amssymb, mathtools}
+% --- figures & tables ---
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\captionsetup{font=small, labelfont=bf}
+% --- colour & links (hyperref late, cleveref last) ---
+\usepackage{xcolor}
+\usepackage[colorlinks=true, linkcolor=blue!60!black,
+            citecolor=green!40!black, urlcolor=blue!70!black]{hyperref}
+\usepackage[capitalise, noabbrev]{cleveref}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\section{Everything ready to go}\label{sec:demo}
+This preamble loads maths, tables, figures, colour, links and smart
+references, so \cref{sec:demo} and \cref{eq:demo} just work, and
+\url{https://ctan.org} is clickable.
+\begin{equation}\label{eq:demo}
+  \mathbb{E}[X] = \int_{-\infty}^{\infty} x \, p(x) \, \mathrm{d}x
+\end{equation}
+%% <<< snippet
+\end{document}
