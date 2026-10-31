@@ -1,0 +1,29 @@
+{
+  "id": "solidworks",
+  "name": "SolidWorks",
+  "type": "icon",
+  "category": [
+    "brands",
+    "cad"
+  ],
+  "tags": [
+    "solidworks",
+    "cad",
+    "3d",
+    "modelling",
+    "dassault",
+    "skill"
+  ],
+  "requires": [
+    "tikz"
+  ],
+  "description": "SolidWorks skill badge: a red tile with a bold italic SW monogram.",
+  "notes": [
+    "This is a simple **skill badge** in the brand's colour, not the official logo. Official marks for this brand aren't in the free icon sets I use.",
+    "Change the colour once via the `\\definecolor` in the preamble.",
+    "Resize with `[scale=...]` on the tikzpicture, or grab the SVG/PNG for a CV or slide."
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

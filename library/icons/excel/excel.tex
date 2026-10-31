@@ -1,0 +1,24 @@
+\documentclass[border=4pt]{standalone}
+
+% Excel skill badge (generic spreadsheet grid, not the official logo).
+% A simple "skill badge" in the brand colour, drawn from scratch in TikZ. It is
+% NOT the official logo. Swap in the real mark if you have the right to use it.
+
+%% >>> preamble
+\usepackage{tikz}
+\definecolor{brandexcel}{HTML}{1D6F42}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\begin{tikzpicture}
+  \fill[brandexcel, rounded corners=0.45cm] (0,0) rectangle (2.5,2.5);
+  \fill[white, rounded corners=1.5pt] (0.5,0.95) rectangle (2.0,2.0);
+  \fill[brandexcel!25!white] (0.5,1.74) rectangle (2.0,2.0);
+  \foreach \y in {1.21,1.47,1.74} \draw[brandexcel, line width=0.5pt] (0.5,\y) -- (2.0,\y);
+  \foreach \x in {0.88,1.25,1.62} \draw[brandexcel, line width=0.5pt] (\x,0.95) -- (\x,2.0);
+  \draw[brandexcel!70!black, line width=0.9pt, rounded corners=1.5pt] (0.5,0.95) rectangle (2.0,2.0);
+  \node[white, font=\fontfamily{phv}\fontseries{b}\selectfont\fontsize{10.5}{10.5}\selectfont] at (1.25,0.5) {Excel};
+\end{tikzpicture}
+%% <<< snippet
+\end{document}

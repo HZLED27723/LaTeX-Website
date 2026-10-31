@@ -88,7 +88,7 @@ def check_entry(meta_path: Path, root: Path, seen: dict[str, str]) -> tuple[list
     if extract_region(source, "snippet") is None:
         errors.append("no '%% >>> snippet' ... '%% <<< snippet' region in the .tex")
     preamble = extract_region(source, "preamble")
-    if preamble is None and entry_type in ("snippet", "preamble"):
+    if preamble is None and entry_type in ("snippet", "preamble", "icon"):
         errors.append("no '%% >>> preamble' ... '%% <<< preamble' region in the .tex")
     if preamble:
         used = {p.strip() for grp in USEPKG_RE.findall(strip_comments(preamble))

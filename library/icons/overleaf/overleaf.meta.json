@@ -1,0 +1,28 @@
+{
+  "id": "overleaf",
+  "name": "Overleaf",
+  "type": "icon",
+  "category": [
+    "brands",
+    "writing"
+  ],
+  "tags": [
+    "editor",
+    "latex",
+    "overleaf",
+    "writing",
+    "skill"
+  ],
+  "requires": [
+    "tikz"
+  ],
+  "description": "Overleaf brand mark, official brand color.",
+  "notes": [
+    "Official brand colour is defined once in the preamble. Change that one `\\definecolor` to make it monochrome.",
+    "The path is pre-scaled to about 2.5cm; resize with `[scale=...]` on the tikzpicture.",
+    "Imported from [OpenTikZ](https://github.com/opentikz/opentikz) (shape data from simple-icons, CC0)."
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

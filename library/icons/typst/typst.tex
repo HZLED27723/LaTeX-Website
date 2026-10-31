@@ -1,0 +1,19 @@
+\documentclass[border=4pt]{standalone}
+
+% Typst skill badge.
+% A simple "skill badge" in the brand colour, drawn from scratch in TikZ. It is
+% NOT the official logo. Swap in the real mark if you have the right to use it.
+
+%% >>> preamble
+\usepackage{tikz}
+\definecolor{brandtypst}{HTML}{239DAD}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\begin{tikzpicture}
+  \fill[brandtypst, rounded corners=0.45cm] (0,0) rectangle (2.5,2.5);
+  \node[white, font=\fontfamily{phv}\fontseries{b}\selectfont\fontsize{19}{19}\selectfont] at (1.25,1.25) {typst};
+\end{tikzpicture}
+%% <<< snippet
+\end{document}

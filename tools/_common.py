@@ -12,9 +12,11 @@ from pathlib import Path
 from typing import Iterator
 
 # Entry types, in display order. The folder under library/ is the plural.
-TYPES = ("snippet", "preamble", "template")
-TYPE_DIRS = {"snippet": "snippets", "preamble": "preambles", "template": "templates"}
-TYPE_TITLES = {"snippet": "Snippets", "preamble": "Preambles", "template": "Templates"}
+TYPES = ("snippet", "preamble", "template", "icon")
+TYPE_DIRS = {"snippet": "snippets", "preamble": "preambles", "template": "templates",
+             "icon": "icons"}
+TYPE_TITLES = {"snippet": "Snippets", "preamble": "Preambles", "template": "Templates",
+               "icon": "Icons"}
 
 ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 

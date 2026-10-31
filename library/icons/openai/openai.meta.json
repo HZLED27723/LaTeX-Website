@@ -1,0 +1,29 @@
+{
+  "id": "openai",
+  "name": "OpenAI",
+  "type": "icon",
+  "category": [
+    "brands",
+    "ai"
+  ],
+  "tags": [
+    "openai",
+    "chatgpt",
+    "gpt",
+    "ai",
+    "llm",
+    "skill"
+  ],
+  "requires": [
+    "tikz"
+  ],
+  "description": "OpenAI skill badge: a black tile with the name in white.",
+  "notes": [
+    "This is a simple **skill badge** in the brand's colour, not the official logo. Official marks for this brand aren't in the free icon sets I use.",
+    "Change the colour once via the `\\definecolor` in the preamble.",
+    "Resize with `[scale=...]` on the tikzpicture, or grab the SVG/PNG for a CV or slide."
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}

@@ -1,0 +1,26 @@
+\documentclass[border=4pt]{standalone}
+
+% MATLAB skill badge (surface motif is generic, not the L-shaped membrane logo).
+% A simple "skill badge" in the brand colour, drawn from scratch in TikZ. It is
+% NOT the official logo. Swap in the real mark if you have the right to use it.
+
+%% >>> preamble
+\usepackage{tikz}
+\definecolor{brandmatlab}{HTML}{0B3C5D}
+%% <<< preamble
+
+\begin{document}
+%% >>> snippet
+\begin{tikzpicture}
+  \fill[brandmatlab, rounded corners=0.45cm] (0,0) rectangle (2.5,2.5);
+  \definecolor{matlaborange}{HTML}{E16737}
+  \foreach \i in {0,...,6} {
+    \pgfmathtruncatemacro{\shade}{55+7*\i}
+    \draw[matlaborange!\shade!white, line width=0.75pt]
+      plot[domain=0:1.25, samples=40, smooth]
+      ({0.42+\x+0.06*\i}, {0.95+0.13*\i+0.22*sin(260*\x+35*\i)});
+  }
+  \node[white, font=\fontfamily{phv}\fontseries{b}\selectfont\fontsize{10.5}{10.5}\selectfont] at (1.25,0.45) {MATLAB};
+\end{tikzpicture}
+%% <<< snippet
+\end{document}

@@ -137,6 +137,7 @@ def navbar(surface: str, prefix: str) -> str:
       <a href="{sec}#snippets" data-nav="snippets">Snippets</a>
       <a href="{sec}#preambles" data-nav="preambles">Preambles</a>
       <a href="{sec}#templates" data-nav="templates">Templates</a>
+      <a href="{sec}#icons" data-nav="icons">Icons</a>
       <a href="{repo_blob_url('README.md')}#adding-an-entry">Add entry</a>
       <a class="nav-gh" href="{repo_tree_url()}" target="_blank" rel="noopener">GitHub <span class="star">★</span></a>
     </nav>
@@ -156,7 +157,7 @@ def tag_list(tags: list[str]) -> str:
 def card(item: dict, prefix: str, idx: int) -> str:
     name = html.escape(item["name"])
     cats = item.get("category", [])
-    page = " canvas-page" if item["type"] == "template" else ""
+    page = {"template": " canvas-page", "icon": " canvas-icon"}.get(item["type"], "")
     return f"""  <a class="card" href="{prefix}item/{html.escape(item['id'])}.html" data-id="{html.escape(item['id'])}" data-type="{html.escape(item['type'])}" data-cats="{html.escape(' '.join(cats))}" style="--i:{idx}">
     <div class="canvas{page}"><img src="{prefix}previews/{html.escape(item['id'])}.svg" alt="{name} preview" loading="lazy"></div>
     <div class="card-meta">
@@ -233,7 +234,15 @@ USAGE = {
                  "<code>\\usepackage{{{id}}}</code>."),
     "template": ("Download the full <code>.tex</code> (or copy it) and save it as your "
                  "<code>main.tex</code> — it compiles as-is. Then replace the placeholder text."),
+    "icon": ("Copy the <strong>preamble</strong> lines (TikZ + the brand colour) into your preamble "
+             "and paste the <strong>snippet</strong> where you want the icon. Resize it with "
+             "<code>\\begin{tikzpicture}[scale=0.5]</code> or wrap it in "
+             "<code>\\resizebox{1cm}{!}{...}</code>. Or just grab the SVG/PNG for slides and CVs."),
 }
+
+TRADEMARK_NOTE = ('<p class="license-note">The TikZ <strong>code</strong> is free to reuse; the '
+                  '<strong>brand</strong> it represents is a trademark of its owner. Use it to '
+                  'identify the tool (e.g. on a CV or skills slide), not to imply endorsement.</p>')
 
 
 def sty_text(item: dict, preamble: str) -> str:
@@ -284,7 +293,7 @@ def item_page(item: dict, source: str, tex_name: str) -> str:
         + f"""<main class="item">
   <a class="back" href="../browse/index.html">← browse the library</a>
   <div class="item-top">
-    <div class="item-canvas{' canvas-page' if is_template else ''}"><img src="{preview}" alt="{name} preview"></div>
+    <div class="item-canvas{' canvas-page' if is_template else ''}{' canvas-icon' if item['type'] == 'icon' else ''}"><img src="{preview}" alt="{name} preview"></div>
     <div class="item-head">
       {badge(item['type'])}
       <h1>{name}</h1>
@@ -301,6 +310,7 @@ def item_page(item: dict, source: str, tex_name: str) -> str:
   <section class="usage">
     <h2>Use it</h2>
     <p>{usage}</p>
+    {TRADEMARK_NOTE if "brands" in item.get("category", []) else ""}
     <p class="license-note">Source: <a href="{repo_tree_url(item['path'])}" target="_blank" rel="noopener"><code>{html.escape(item['path'])}/</code></a></p>
   </section>
 </main>
@@ -523,7 +533,7 @@ def browse_page(items: list[dict]) -> str:
         + f"""<section class="hero hero-browse">
   <h1 class="browse-title">Browse the library</h1>
   <div class="hero-search">
-    <input id="search" type="search" placeholder="Search snippets, packages, tags…    ( / )" autocomplete="off" aria-label="Search the library">
+    <input id="search" type="search" placeholder="Search snippets, icons, packages, tags…    ( / )" autocomplete="off" aria-label="Search the library">
   </div>
   <div class="chips" id="chips">
       {chr(10).join('      ' + c for c in chips).strip()}
@@ -765,7 +775,8 @@ code{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.86em;
 .badge-template{color:var(--otblue)}
 .badge-example{color:var(--otpurple)}
 .badge-skill{color:var(--otorange)}
-.badge-snippet{color:var(--otteal)}
+.badge-snippet{color:var(--otpurple)}
+.badge-icon{color:var(--otteal)}
 .badge-preamble{color:var(--otorange)}
 
 /* ---------- item page ---------- */
@@ -1066,6 +1077,8 @@ code{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.86em;
 /* full-page template previews read as a sheet of paper */
 .canvas-page img, .item-canvas.canvas-page img{background:#fff; box-shadow:0 1px 0 var(--line-strong), 0 10px 24px -14px rgba(27,26,22,.55); border:1px solid var(--line)}
 .canvas.canvas-page{padding:14px}
+.canvas.canvas-icon img{height:118px; max-height:118px; width:auto}
+.item-canvas.canvas-icon img{height:230px; width:auto}
 .canvas.canvas-page img{max-height:168px}
 .item-canvas.canvas-page img{max-height:520px}
 .hero-page img{filter:drop-shadow(0 10px 18px rgba(27,26,22,.22))}
@@ -1176,7 +1189,7 @@ APP_JS = r"""(function () {
 
     // ---- active-section highlight (only the section links; Browse stays active) ----
     var sectionLinks = {};
-    ['snippets', 'preambles', 'templates'].forEach(function (k) {
+    ['snippets', 'preambles', 'templates', 'icons'].forEach(function (k) {
       var a = document.querySelector('.nav-links a[data-nav="' + k + '"]');
       if (a) sectionLinks[k] = a;
     });

@@ -1,0 +1,28 @@
+{
+  "id": "github",
+  "name": "GitHub",
+  "type": "icon",
+  "category": [
+    "brands",
+    "tools"
+  ],
+  "tags": [
+    "code hosting",
+    "github",
+    "open source",
+    "repository",
+    "skill"
+  ],
+  "requires": [
+    "tikz"
+  ],
+  "description": "GitHub brand mark (Octocat silhouette), official brand color.",
+  "notes": [
+    "Official brand colour is defined once in the preamble. Change that one `\\definecolor` to make it monochrome.",
+    "The path is pre-scaled to about 2.5cm; resize with `[scale=...]` on the tikzpicture.",
+    "Imported from [OpenTikZ](https://github.com/opentikz/opentikz) (shape data from simple-icons, CC0)."
+  ],
+  "added": "2026-10-31",
+  "featured": false,
+  "preview": "preview.svg"
+}
