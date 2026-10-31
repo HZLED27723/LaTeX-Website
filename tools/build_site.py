@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import functools
+import hashlib
 import html
 import http.server
 import json
@@ -36,6 +37,7 @@ from _common import (TYPE_TITLES, TYPES, extract_region, lib_root, load_config,
                      strip_markers, tex_sibling)
 
 CFG: dict = {}
+ASSET_V = ""   # content hash appended to CSS/JS URLs so browsers never use a stale copy
 TYPE_ORDER = {t: i for i, t in enumerate(TYPES)}
 
 
@@ -112,7 +114,7 @@ def head(title: str, prefix: str, *, description: str = "", browse_href: str = "
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{prefix}assets/style.css">
+<link rel="stylesheet" href="{prefix}assets/style.css?v={ASSET_V}">
 </head>
 <body data-browse="{browse_href}">
 <div class="grid-bg" aria-hidden="true"></div>
@@ -316,7 +318,7 @@ def item_page(item: dict, source: str, tex_name: str) -> str:
 </main>
 """
         + footer(prefix)
-        + '<script src="../assets/app.js"></script>\n</body>\n</html>\n'
+        + f'<script src="../assets/app.js?v={ASSET_V}"></script>\n</body>\n</html>\n'
     )
 
 
@@ -458,7 +460,26 @@ def getstarted_band() -> str:
 """
 
 
-def home_page(showcase: list[dict], counts: dict) -> str:
+def skills_band(icons: list[dict]) -> str:
+    """Home-page strip of every icon, so skills are visible without going to Browse."""
+    if not icons:
+        return ""
+    tiles = "".join(
+        f'<a class="skill-tile" href="item/{html.escape(it["id"])}.html">'
+        f'<img src="previews/{html.escape(it["id"])}.svg" alt="" loading="lazy">'
+        f'<span>{html.escape(it["name"])}</span></a>'
+        for it in icons)
+    return f"""
+  <section class="skills-band" id="skills">
+    <h2>Skills &amp; tools</h2>
+    <p class="gs-lede">Icons I can drop into any document, CV or slide, as TikZ, SVG or PNG.</p>
+    <div class="skill-grid">{tiles}</div>
+    <a class="btn btn-ghost" href="browse/index.html#icons">All icons &rarr;</a>
+  </section>
+"""
+
+
+def home_page(showcase: list[dict], counts: dict, icons: list[dict] | None = None) -> str:
     stats = " · ".join(f"{counts[t]} {TYPE_TITLES[t].lower()}" for t in TYPES if counts.get(t))
     return (
         head(f"{brand_text()} — {CFG['tagline']}", "", browse_href="browse/index.html")
@@ -473,6 +494,7 @@ def home_page(showcase: list[dict], counts: dict) -> str:
     </div>
     <p class="cta-sub">{html.escape(stats)}</p>
   </section>
+{skills_band(icons or [])}
 {getstarted_band()}
 {howto_carousel()}
 {why_band()}
@@ -484,7 +506,7 @@ def home_page(showcase: list[dict], counts: dict) -> str:
 </main>
 """
         + footer("")
-        + '<script src="assets/app.js"></script>\n</body>\n</html>\n'
+        + f'<script src="assets/app.js?v={ASSET_V}"></script>\n</body>\n</html>\n'
     )
 
 
@@ -553,14 +575,15 @@ def browse_page(items: list[dict]) -> str:
         + ('<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js" '
            'integrity="sha384-PCSoOZTpbkikBEtd/+uV3WNdc676i9KUf01KOA8CnJotvlx8rRrETbDuwdjqTYvt" '
            'crossorigin="anonymous" referrerpolicy="no-referrer"></script>\n')
-        + '<script src="../assets/app.js"></script>\n'
+        + f'<script src="../assets/app.js?v={ASSET_V}"></script>\n'
         + "</body>\n</html>\n"
     )
 
 
 def build(root: Path, render: str) -> int:
-    global CFG
+    global CFG, ASSET_V
     CFG = load_config(root)
+    ASSET_V = hashlib.sha1((STYLE_CSS + APP_JS).encode()).hexdigest()[:10]
 
     if render != "none":
         if render_preview.have_toolchain():
@@ -614,7 +637,8 @@ def build(root: Path, render: str) -> int:
 
     counts = {t: sum(1 for it in catalog if it["type"] == t) for t in TYPES}
     showcase = [it for it in catalog if it.get("featured")] or catalog[:8]
-    (site / "index.html").write_text(home_page(showcase, counts), encoding="utf-8")
+    icons = [it for it in catalog if it["type"] == "icon"]
+    (site / "index.html").write_text(home_page(showcase, counts, icons), encoding="utf-8")
 
     if CFG.get("site_url"):
         base = CFG["site_url"].rstrip("/")
@@ -1090,6 +1114,17 @@ code{font-family:"IBM Plex Mono",ui-monospace,monospace; font-size:.86em;
 .howto-carousel .demo-slide{min-height:250px}
 .howto-codes code{white-space:nowrap; max-width:100%; overflow:hidden; text-overflow:ellipsis}
 .site-footer a{color:var(--otblue); text-decoration:none}
+/* home: skills & tools strip */
+.skills-band{padding:42px 0; border-top:1px solid var(--line); text-align:center}
+.skills-band h2{font-family:"Fraunces",serif; font-weight:600; font-size:1.7rem; margin:0 0 .25em; letter-spacing:-.01em}
+.skill-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(104px,1fr)); gap:12px;
+  max-width:960px; margin:18px auto 22px}
+.skill-tile{display:flex; flex-direction:column; align-items:center; gap:8px; padding:14px 8px 11px;
+  background:#fff; border:1px solid var(--line); border-radius:10px; text-decoration:none;
+  box-shadow:var(--shadow); transition:transform .15s, border-color .15s}
+.skill-tile:hover{transform:translateY(-3px); border-color:var(--line-strong)}
+.skill-tile img{height:52px; width:auto; max-width:100%}
+.skill-tile span{font:500 .78rem "IBM Plex Sans",sans-serif; color:var(--ink)}
 .site-footer a:hover{text-decoration:underline}
 .cta-sub{margin-top:1.2em}
 """
